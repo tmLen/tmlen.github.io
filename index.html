@@ -2,266 +2,374 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Творчество Хаяо Миядзаки</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Мой Кипр</title>
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
     <style>
-        @import url('https://fonts.googleapis.com/css?family=Amatic+SC|Ubuntu');
-        html, body {
+        @font-face {
+            font-family: "greece";
+            src: url("dict.ttf");
+        }
+        body, html {
             margin: 0;
         }
-        /*комментарий*/
-        .top_image {
-            background: url("http://miuki.info/wp-content/gallery/pics-mix/hayao.jpg") 50%/cover no-repeat;
-            height: 650px;
+        header {
+            position: fixed;
+            z-index: 1000;
+        }
+        .sky {
+            position: fixed;
+            background: url("pattern (2).png") 50%/contain;
+            width: 100%;
+            height: 80px;
+        }
+        .sky_free_space {
+            width: 100%;
+            height: 120px;
+        }
+        .sky_free_space2 {
+            width: 100%;
+            height: 80px;
+        }
+        .sun {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            position: absolute;
+            left: 5vw;
+            top: 0.5vw;
+            background: url("http://clipart-library.com/img/1670097.png") 50%/cover no-repeat;
+            transition: all 3s ease-out;
+        }
+        .control {
+            display: inline-block;
+            position: relative;
+            width: 33.3%;
+            height: 80px;
+            transition: all 3s ease-in-out;
+        }
+        .day {
+            width: 66.6%;
+        }
+        .day:hover ~ .sun {
+            left: 50vw;
+            background: url("http://pngimg.com/uploads/sun/sun_PNG13446.png") 50%/cover no-repeat;
+            width: 60px;
+            height: 60px;
+        }
+        .evening:hover ~ .sun {
+            left: 95vw; 
+            background: url("http://clipart-library.com/img/1670097.png") 50%/cover no-repeat;
+        }
+        .day:hover ~ .control {
+            background: cyan;
+        }
+        .day:hover {
+            background: cyan;
+        }
+        main {
+            padding: 10px;
+        }
+        .nav {
+            width: 100vw;
+            height: 40px;
+            background: white;
+            border: 1px solid #343875;
+            font-family: "greece";
             box-sizing: border-box;
         }
-        .menu_background {
-            background: url("http://static.diary.ru/userdir/6/0/6/8/606832/84913081.jpg") 50%/contain repeat-x;
-            text-align: center;
-            border: 1px solid rgb(4, 99, 128);
-            position: sticky;
-            top: 0;
-            font-family: "Amatic SC";
-        }
-        h1 {
-            margin-top: 0px;
-            text-align: center;
-            padding-top: 200px;
-            font-size: 5rem;
-            color: white;
-            position: sticky;
-            top: 0;
-            text-shadow: 1px 1px 0px rgb(0, 47, 47), -1px -1px 0 rgb(0, 47, 47);
-            font-family: "Amatic SC";
-        }
-        .menu {
-            display: inline-block;
+        .nav_menu {
+            margin: 0;
         }
         .menu_item {
-            display: block;
-            height: 40px;
-            width: 250px;
-            background-color: white;
-            border: 1px solid rgb(0, 47, 47);
-            border-radius: 5px;
-            font-size: 2rem;
+            display: inline-block;
+            box-sizing: border-box;
+            width: 30%;
+            height: 100%;
+            text-align: center;
+            margin: 2px;
+            padding: 5px;
+            border: 3px ride transparent;
+        }
+        .menu_link {
             text-decoration: none;
-            margin: 10px 20px 10px 20px;
-            color: rgb(0, 47, 47);
-            font-weight: bold;
+            color: black;
         }
         .menu_item:hover {
-            background-color: rgb(4, 99, 128);
+            background: rgba(7, 209, 245, 0.5);
         }
-        body {
-            background-color: rgb(239, 236, 202);
-            font-family: "Ubuntu";
+        .section {
+            margin-left: 5%;
+            margin-bottom: 50px;
+            width: 90%;
+            height: 90vh;
+            border: 2px solid black;
+            border-radius: 100px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
-        article {
-            margin: 40px;
-            border: 1px solid rgb(0, 47, 47);
-            border-radius: 40px;
-            padding: 20px;
-        }
-        .odd {
-            background-color:  rgb(230, 226, 175);
-        }
-        .even {
-            background-color:  rgb(167, 163, 126);
-        }
-        strong {
-            font-weight: normal;
-        }
-        i, cite {
-            font-style: normal;
-        }
-        #art01:before {
+        #landscape_section::before {
             display: block;
             content: "";
             height: 150px;
             margin: -150px 0 0;
+
         }
-        #art02:before {
+        #cities_section::before {
             display: block;
             content: "";
             height: 150px;
             margin: -150px 0 0;
+
         }
-        #art03:before {
+        #sea_section::before {
             display: block;
             content: "";
             height: 150px;
             margin: -150px 0 0;
+
         }
-        #art04:before {
-            display: block;
-            content: "";
-            height: 150px;
-            margin: -150px 0 0;
+        .background_opacity_img {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-radius: 100px;
+            opacity: 0.2;
+            z-index: -10;
+        }
+        .img_menu {
+            position: absolute;
+            background: white;  
+            left: 10%;
+            top: 20%;
+            width: 80%;
+            height: 30%;
+            border-radius: 50px;
+            z-index: 2;
+            border: 1px solid black;
+
+        }
+        .img_item {position: relative;
+            display: inline-block;
+            width: 22%;
+            height: 95%;
+            background: cyan;
+            margin-left: 2%;
+            margin-top: 0.5%;
+            border-radius: 20px;
+        }
+        .mini_img {
+            width: 100%;
+            height: 100%;
+            border-radius: 20px;
+            transition: 0s;
+            z-index: 10;
+        }
+        input[type=checkbox] {
+            display: none;
+        }
+        #img1_1:checked ~   .img_item1_1 > .mini_img {
+            position: absolute;
+            left: -10%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+
+        }
+        #img1_2:checked ~ .img_item1_2 > .mini_img  {
+            position: absolute;
+            left: -120%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+
+        }
+        #img1_3:checked ~ .img_item1_3 > .mini_img  {
+            position: absolute;
+            left: -230%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+
+        }
+        #img1_4:checked ~ .img_item1_4 > .mini_img  {
+            position: absolute;
+            left: -340%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+
+        }
+        .mini_img:hover {
+            transform: rotate(3deg);
+        }
+        .img_menu2 {
+            position: absolute;
+            background: white;  
+            left: 10%;
+            top: 120%;
+            width: 80%;
+            height: 30%;
+            border-radius: 50px;
+            z-index: 2;
+            border: 1px solid black;
+        }
+        #img2_1:checked ~   .img_item2_1 > .mini_img {
+            position: absolute;
+            left: -10%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+
+        }
+        #img2_2:checked ~ .img_item2_2 > .mini_img  {
+            position: absolute;
+            left: -120%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+
+        }
+        #img2_3:checked ~ .img_item2_3 > .mini_img  {
+            position: absolute;
+            left: -230%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+
+        }
+        #img2_4:checked ~ .img_item2_4 > .mini_img  {
+            position: absolute;
+            left: -340%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+        }
+        .img_menu3 {
+            position: absolute;
+            background: white;  
+            left: 10%;
+            top: 215%;
+            width: 80%;
+            height: 30%;
+            border-radius: 50px;
+            z-index: 2;
+            border: 1px solid black;
+        }
+        #img3_1:checked ~   .img_item2_1 > .mini_img {
+            position: absolute;
+            left: -10%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+
+        }
+        #img3_2:checked ~ .img_item2_2 > .mini_img  {
+            position: absolute;
+            left: -120%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+
+        }
+        #img3_3:checked ~ .img_item2_3 > .mini_img  {
+            position: absolute;
+            left: -230%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
+
+        }
+        #img3_4:checked ~ .img_item2_4 > .mini_img  {
+            position: absolute;
+            left: -340%;
+            top: 0;
+            width: 80vw;
+            height: 80vh;
+            transform: rotate(0deg);
         }
         footer {
-            margin: 40px;
-        }
-        img {
-            text-align: center;
-            border: 4px double rgb(0, 47, 47);
-            border-radius: 20px;
-            width: 300px; 
-            height: 150px; 
-            object-fit: cover;
-        }
-        .image_block {
-            text-align: center;
-        }
-        #miadzaki {
-            margin: 10px;
-            width: auto;
-            height: 220px;
-            float: right;
-            margin-top: 0;
+            margin-left: 5%;
+            width: 25vw;
+            padding: 10px;
+            margin-bottom: 50px;
+            border: 2px solid black;
+            border-radius: 100px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.5);
         }
     </style>
 </head>
 <body>
-    <header>
-        <div class="top_image">
-            <h1>Творчеству Хаяо Миядзаки посвящается</h1>
-        </div>
-    </header>
-    <main>
-        <div class="menu_background">
-            <ul>
-                <li class="menu">
-                    <a href="#art01" class="menu_item">О художнике</a>
-                </li>
-                <li class="menu">
-                    <a href="#art02" class="menu_item">Мой сосед Тоторо</a>
-                </li>
-                <li class="menu">
-                    <a href="#art03" class="menu_item">Ходячий замок</a>
-                </li>
-                <li class="menu">
-                    <a href="#art04" class="menu_item">Унесенные призраками</a>
-                 </li>
-            </ul>
-        </div>
-    
-        <article class="odd">
-            <h2 id="art01">О художнике</h2>
-            <p>
-                <strong>Хаяо Миядзаки</strong> — японский режиссёр-аниматор. 
-                Вместе с Исао Такахатой основал анимационную студию — <strong>«Студию Гибли»</strong>.
-            </p>
-            <img id="miadzaki" src="https://24smi.org/public/media/resize/660x-/celebrity/2017/03/24/o66UeVLnmJhK_khaiao-miiadzaki.jpg">
-            <p>
-                Родился в городе <i>Акэбоно-тё</i>, расположенном в одном из 23 специальных районов префектуры <i>Токио</i> — 
-                <i>Бункё-ку</i>, был вторым из четырёх братьев. Отец, Кацудзи Миядзаки, во время войны был директором Миядзаки Эйрплейн, 
-                фабрики по изготовлению деталей к самолётам A6M Zero. Хозяином фабрики был брат отца. Мать страдала туберкулёзом позвоночника. 
-                В период с 1947 по 1955 она часто находилась в различных больницах, из-за чего семье приходилось много переезжать. 
-                Будучи в последнем классе старшей школы Тоётама, увидел в кино анимационный фильм «Хякудзядэн»(Легенда о белой змее). 
-                По его собственным словам, именно с этого момента он твёрдо решил стать аниматором.
-            </p>
-            <p>
-                В 1963 закончил престижный Университет Гакусюин, факультет политики и экономики. 
-                В университете входил в клуб по изучению детской литературы. В этом клубе изучались, 
-                в основном, западные детские книги. В апреле 1963 получил работу фазовщика в Toei Animation. 
-                К 1964 года стал председателем профсоюза.
-            </p>
-            <p>
-                В октябре 1965 женился на коллеге Акэми Ота. Двое сыновей: Горо и Кэнсукэ. 
-                Первый против воли отца снял анимационный фильм «Сказания Земноморья», 
-                второй — резчик по дереву, одна из его работ использована в «Шёпоте сердца».
-            </p>
-            <h2>Творчество</h2>
-            <p>
-                Миядзаки создал или участвовал в создании множества полнометражных аниме. 
-                Кроме того, он также автор нескольких манг. В Японии фильмы Миядзаки имели огромные 
-                кассовые сборы и встретили большой успех у критиков. Фильм «Унесённые призраками» стал 
-                самым прибыльным фильмом в Японии за всю историю, «Принцесса Мононокэ» и «Ходячий замок» 
-                также имели огромный успех. Несмотря на это, до выхода в 2002 году фильма «Унесённые призраками», 
-                за пределами Японии он был известен мало. Многие его фильмы посвящены теме взаимоотношений 
-                человечества с природой и технологиями. Как указал в одном из своих интервью Хаяо Миядзаки, 
-                он является ярым поклонником «Ёжика в тумане» и «Снежной королевы», двух советских мультфильмов. 
-            </p>
-        </article>
-        <article class="even">
-                <h2 id="art02">Мой сосед Тоторо</h2>
-                <p>Япония, пятидесятые годы прошлого века. Переехав в деревню, две маленькие сестры Сацуки (старшая) 
-                    и Мэй (младшая) глубоко внутри дерева обнаружили необыкновенный, 
-                    чудесный мир, населённый Тоторо, очаровательными пушистыми созданиями, с которыми 
-                    у девочек сразу же завязалась дружба. Одни из них большие, другие совсем крохотные, 
-                    но у всех у них огромное, доброе сердце и магические способности совершать необыкновенные вещи, 
-                    наподобие полётов над горами или взращивания огромного дерева за одну ночь! Но увидеть этих существ могут лишь дети, 
-                    которые им приглянутся... Подружившись с сёстрами, Тоторо не только устраивают им воздушную экскурсию по своим владениям, 
-                    но и помогают Мэй повидаться с лежащей в больнице мамой.</p>
-                    <div class="image_block">
-                        <img src="http://www.ipicstorage.com/images/my-neighbour-totoro/69834.jpg">
-                        <img src="http://lotfilm.ru/uploads/posts/2016-04/1459838393_768144.jpg">
-                        <img src="https://b1.filmpro.ru/c/67033.jpg">
-                        <img src="http://hotfreewallpaper.com/wp-content/uploads/plixpapers1512/catbus_from_totoro_wallpaper_background_4741.jpg">
+        <header>
+            <div class="sky">
+                <div class="control day"></div><div class="control evening"></div>
+                <div class="sun"></div>
+            </div>
+            <div class="sky_free_space2"></div>
+            <div class="nav">
+                <ul class="nav_menu">
+                    <a class="menu_link" href="#landscape_section"><li class="menu_item">Пейзажи</li></a>
+                    <a class="menu_link" href="#cities_section"><li class="menu_item">Города</li></a>
+                    <a class="menu_link" href="#sea_section"><li class="menu_item">Море</li></a>
+                </ul>
+            </div>
+        </header>
+        <div class="sky_free_space"></div>
+        <main>
+            <div class="section landscape" id="landscape_section">
+                <img src="http://images.faso.us/contests/1/100377org.jpg" alt="" class="background_opacity_img">
+                <div class="img_menu">
+                    <input type="checkbox" id="img1_1">
+                    <label for="img1_1" class="img_item img_item1_1"><img class="mini_img" src="http://img1.arrivo.ru/cfcd/19/4842/0/3_Типичный_кипрский_пейзаж_view-flickr.com-_tomasz.cc.jpg" alt=""></label>
+                    <input type="checkbox" id="img1_2">
+                    <label for="img1_2" class="img_item img_item1_2"><img class="mini_img" src="http://s3.amazonaws.com/medias.photodeck.com/b9f401a8-2e63-11e2-b1a2-4bf841527154/Psematismenos-252684_uxga.jpg" alt=""></label>
+                    <input type="checkbox" id="img1_3">
+                    <label for="img1_3" class="img_item img_item1_3"><img class="mini_img" src="http://img-d.photosight.ru/f04/5140547_xlarge.jpg" alt=""></label>
+                    <input type="checkbox" id="img1_4">
+                    <label for="img1_4" class="img_item img_item1_4"><img class="mini_img" src="https://static.tonkosti.ru/images/c/c5/Жиовписный_пейзаж%2C_Кипр.jpg" alt=""></label>
+                </div>
+            </div>
+            <div class="section cities" id="cities_section">
+                <img src="http://natblog.ru/wp-content/uploads/Pantelis-Zografos_2701/naousa.jpg" alt="" class="background_opacity_img">
+                <div class="img_menu2">
+                        <input type="checkbox" id="img2_1">
+                        <label for="img2_1" class="img_item img_item2_1"><img class="mini_img" src="http://byvali.ru/sites/default/files/pictures/kipr/nicosia/obshaya/nicosia.jpg" alt=""></label>
+                        <input type="checkbox" id="img2_2">
+                        <label for="img2_2" class="img_item img_item2_2"><img class="mini_img" src="http://fototelegraf.ru/wp-content/uploads/2017/10/kipr-10-2.jpg" alt=""></label>
+                        <input type="checkbox" id="img2_3">
+                        <label for="img2_3" class="img_item img_item2_3"><img class="mini_img" src="https://investments.academic.ru/pictures/investments/img1971877_Nikosiya.jpg" alt=""></label>
+                        <input type="checkbox" id="img2_4">
+                        <label for="img2_4" class="img_item img_item2_4"><img class="mini_img" src="https://f.otzyv.ru/f/09/06/32041/310315092428.jpg" alt=""></label>
                     </div>
-        </article>
-        <article class="odd">
-                <h2 id="art03">Ходячий замок</h2>
-                <p>
-                    <cite>«Ходячий замок»</cite> — полнометражное аниме, выпущенное студией «Ghibli» в 2004 году. 
-                    Создан по мотивам одноимённого сказочного романа английской писательницы <cite>Дианы Уинн Джонс</cite>.
-                </p>
-                <p>
-                    Действие фильма происходит в параллельном мире Европы конца XIX-го века, 
-                    где магия идёт рука об руку с техническим прогрессом. Скромная жизнь шляпницы Софи 
-                    полностью изменяется, когда в окрестностях её города появляется ходячий замок таинственного 
-                    волшебника Хаула, известного своими «похищениями» девичьих сердец. Спасённая этим голубоглазым 
-                    юношей от приставаний двух военных, она влюбляется в него. Однако, волнующая прогулка с 
-                    ним обходится юной шляпнице её красотой и молодостью, отнятыми колдовством ревнивой Ведьмы Пустоши. 
-                    Это событие заставляет Софи покинуть родной дом и в отчаянии отправиться в Дикую Пустошь, 
-                    которая пользуется дурной славой, чтобы снять с себя проклятие. По дороге ей попадается 
-                    огородное пугало — Репка, которое дарит Софи трость и помогает попасть в странное сооружение — 
-                    замок Хаула. «Бабушка» Софи, не спрашивая разрешения хозяина, сама себя назначает уборщицей 
-                    этого странного гигантского дома на стальных «курьих ножках». Со временем она обретает в замке 
-                    семью, хоть и немного странную. В замке живут: огненный демон Кальцифер, ученик Хаула Маркл, 
-                    а также сам Хаул — могущественный юный волшебник. Софи желает снять проклятие Ведьмы Пустоши, 
-                    но даже сама ведьма, наложившая чары, не может этого сделать. Также выясняется, что заклятие 
-                    лежит и на самом Хауле, и на Кальцифере, и на Репке, а также на Ведьме Пустоши. Чтобы разгадать 
-                    тайны проклятий и снять их, героям приходится пройти через множество испытаний.
-                </p>
-                <div class="image_block">
-                    <img src="http://puzzleit.ru/files/puzzles/134/134230/_original.jpg">
-                    <img src="http://www.kinopodbaranami.pl/images_lib/doc_207_1.jpg">
-                    <img src="http://n1s2.hsmedia.ru/e2/75/88/e27588e1aeb2aa33b2ecee326b413a04/660x378_1_87ba663afbf1d527ca8273057c8c1c75@785x450_0xc0a839a2_15611251541458330829.jpeg">
-                    <img src="https://gotposter.com/poster_preview/el-castillo-ambulante-proyecto-freak-787914.jpg">
-                </div>
-        </article>
-        <article class="even">
-                <h2 id="art04">Унесенные призраками</h2>
-                <p>
-                    Вместе с родителями маленькая Тихиро переезжает в другой дом, но по пути они сбиваются с дороги 
-                    и оказываются в странном заброшенном месте. Несмотря на сопротивление Тихиро, родители выходят 
-                    из машины, чтобы разведать местность. Углубляясь всё дальше и дальше, они попадают в пустынный городок,  - 
-                    кругом ни души, но зато... только что приготовленной ароматной еды видимо-невидимо. Поддавшись 
-                    голоду, родители жадно набрасываются на яства и.. превращаются в свиней.
-                </p>
-                <p>
-                    В ужасе, Тихиро кидается прочь из жуткого места, но солнце уже заходит за горизонт и отовсюду 
-                    начинают появляться жуткие призраки - обитатели этого мира... Неожиданно она сталкивается с мальчиком, 
-                    он помогает ей спрятаться и рассказывает о том, что это за место.
-                </p>
-                <p>
-                    Назад дороги больше нет - теперь ей предстоит  пройти множество испытаний, чтобы спасти своих родителей.
-                </p>
-                <div class="image_block">
-                    <img src="http://www.kinowar.com/wp-content/uploads/2015/01/Top-250-фильмов-IMDb-Унесённые-призраками-Sen-to-Chihiro-no-Kamikakushi-2001.jpg">
-                    <img src="https://cdn.fishki.net/upload/post/2016/07/21/2018729/092f1c5347ee0137aca67c9f9634f025.png">
-                    <img src="http://kinofilmy.narod.ru/images/spirited-awey-04-end.jpg">
-                    <img src="http://images2.fanpop.com/images/photos/4300000/Spirited-Away-spirited-away-4374473-852-480.jpg">
-                </div>
-        </article>
-    </main>
-    <footer>
-        <p>
-            Разработчик: Евгений Степанов<br>
-            Материал с сайта <cite><a target="_blank" href="http://findanime.me/">findanime.me</a></cite>
-        </p>
-    </footer>
-    
+            </div>
+            <div class="section sea" id="sea_section">
+                <img src="http://sergeev-art.com/d/142754/d/138.b2ecdbaa0d3b.jpg" alt="" class="background_opacity_img">
+                <div class="img_menu3">
+                        <input type="checkbox" id="img3_1">
+                        <label for="img3_1" class="img_item img_item2_1"><img class="mini_img" src="https://s1.1zoom.ru/big3/757/358178-svetik.jpg" alt=""></label>
+                        <input type="checkbox" id="img3_2">
+                        <label for="img3_2" class="img_item img_item2_2"><img class="mini_img" src="http://zacep.com/wp-content/uploads/2015/07/interesniye-mesta-kipra.jpg" alt=""></label>
+                        <input type="checkbox" id="img3_3">
+                        <label for="img3_3" class="img_item img_item2_3"><img class="mini_img" src="http://lookinhotels.ru/data/public/3811/46328/nice-ocean-view-98191.jpg" alt=""></label>
+                        <input type="checkbox" id="img3_4">
+                        <label for="img3_4" class="img_item img_item2_4"><img class="mini_img" src="https://avatars.mds.yandex.net/get-pdb/51720/97ed6863-00e6-47cf-8fc6-81d86a789710/s1200" alt=""></label>
+                    </div>
+            </div>
+        </main>
+        <footer>
+            <p>Автор: Евгений Степанов<br>
+            На Кипре не был, но хочу побывать =)</p>
+        </footer>
 </body>
 </html>
