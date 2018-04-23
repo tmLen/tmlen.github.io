@@ -4,372 +4,142 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Мой Кипр</title>
+    <link rel="stylesheet" type="text/css" href="style.css" >
+    <title>Червяк Джим</title>
     <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-    <style>
-        @font-face {
-            font-family: "greece";
-            src: url("dict.ttf");
-        }
-        body, html {
-            margin: 0;
-        }
-        header {
-            position: fixed;
-            z-index: 1000;
-        }
-        .sky {
-            position: fixed;
-            background: url("pattern (2).png") 50%/contain;
-            width: 100%;
-            height: 80px;
-        }
-        .sky_free_space {
-            width: 100%;
-            height: 120px;
-        }
-        .sky_free_space2 {
-            width: 100%;
-            height: 80px;
-        }
-        .sun {
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            position: absolute;
-            left: 5vw;
-            top: 0.5vw;
-            background: url("http://clipart-library.com/img/1670097.png") 50%/cover no-repeat;
-            transition: all 3s ease-out;
-        }
-        .control {
-            display: inline-block;
-            position: relative;
-            width: 33.3%;
-            height: 80px;
-            transition: all 3s ease-in-out;
-        }
-        .day {
-            width: 66.6%;
-        }
-        .day:hover ~ .sun {
-            left: 50vw;
-            background: url("http://pngimg.com/uploads/sun/sun_PNG13446.png") 50%/cover no-repeat;
-            width: 60px;
-            height: 60px;
-        }
-        .evening:hover ~ .sun {
-            left: 95vw; 
-            background: url("http://clipart-library.com/img/1670097.png") 50%/cover no-repeat;
-        }
-        .day:hover ~ .control {
-            background: cyan;
-        }
-        .day:hover {
-            background: cyan;
-        }
-        main {
-            padding: 10px;
-        }
-        .nav {
-            width: 100vw;
-            height: 40px;
-            background: white;
-            border: 1px solid #343875;
-            font-family: "greece";
-            box-sizing: border-box;
-        }
-        .nav_menu {
-            margin: 0;
-        }
-        .menu_item {
-            display: inline-block;
-            box-sizing: border-box;
-            width: 30%;
-            height: 100%;
-            text-align: center;
-            margin: 2px;
-            padding: 5px;
-            border: 3px ride transparent;
-        }
-        .menu_link {
-            text-decoration: none;
-            color: black;
-        }
-        .menu_item:hover {
-            background: rgba(7, 209, 245, 0.5);
-        }
-        .section {
-            margin-left: 5%;
-            margin-bottom: 50px;
-            width: 90%;
-            height: 90vh;
-            border: 2px solid black;
-            border-radius: 100px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-        #landscape_section::before {
-            display: block;
-            content: "";
-            height: 150px;
-            margin: -150px 0 0;
 
-        }
-        #cities_section::before {
-            display: block;
-            content: "";
-            height: 150px;
-            margin: -150px 0 0;
-
-        }
-        #sea_section::before {
-            display: block;
-            content: "";
-            height: 150px;
-            margin: -150px 0 0;
-
-        }
-        .background_opacity_img {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border-radius: 100px;
-            opacity: 0.2;
-            z-index: -10;
-        }
-        .img_menu {
-            position: absolute;
-            background: white;  
-            left: 10%;
-            top: 20%;
-            width: 80%;
-            height: 30%;
-            border-radius: 50px;
-            z-index: 2;
-            border: 1px solid black;
-
-        }
-        .img_item {position: relative;
-            display: inline-block;
-            width: 22%;
-            height: 95%;
-            background: cyan;
-            margin-left: 2%;
-            margin-top: 0.5%;
-            border-radius: 20px;
-        }
-        .mini_img {
-            width: 100%;
-            height: 100%;
-            border-radius: 20px;
-            transition: 0s;
-            z-index: 10;
-        }
-        input[type=checkbox] {
-            display: none;
-        }
-        #img1_1:checked ~   .img_item1_1 > .mini_img {
-            position: absolute;
-            left: -10%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-
-        }
-        #img1_2:checked ~ .img_item1_2 > .mini_img  {
-            position: absolute;
-            left: -120%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-
-        }
-        #img1_3:checked ~ .img_item1_3 > .mini_img  {
-            position: absolute;
-            left: -230%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-
-        }
-        #img1_4:checked ~ .img_item1_4 > .mini_img  {
-            position: absolute;
-            left: -340%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-
-        }
-        .mini_img:hover {
-            transform: rotate(3deg);
-        }
-        .img_menu2 {
-            position: absolute;
-            background: white;  
-            left: 10%;
-            top: 120%;
-            width: 80%;
-            height: 30%;
-            border-radius: 50px;
-            z-index: 2;
-            border: 1px solid black;
-        }
-        #img2_1:checked ~   .img_item2_1 > .mini_img {
-            position: absolute;
-            left: -10%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-
-        }
-        #img2_2:checked ~ .img_item2_2 > .mini_img  {
-            position: absolute;
-            left: -120%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-
-        }
-        #img2_3:checked ~ .img_item2_3 > .mini_img  {
-            position: absolute;
-            left: -230%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-
-        }
-        #img2_4:checked ~ .img_item2_4 > .mini_img  {
-            position: absolute;
-            left: -340%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-        }
-        .img_menu3 {
-            position: absolute;
-            background: white;  
-            left: 10%;
-            top: 215%;
-            width: 80%;
-            height: 30%;
-            border-radius: 50px;
-            z-index: 2;
-            border: 1px solid black;
-        }
-        #img3_1:checked ~   .img_item2_1 > .mini_img {
-            position: absolute;
-            left: -10%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-
-        }
-        #img3_2:checked ~ .img_item2_2 > .mini_img  {
-            position: absolute;
-            left: -120%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-
-        }
-        #img3_3:checked ~ .img_item2_3 > .mini_img  {
-            position: absolute;
-            left: -230%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-
-        }
-        #img3_4:checked ~ .img_item2_4 > .mini_img  {
-            position: absolute;
-            left: -340%;
-            top: 0;
-            width: 80vw;
-            height: 80vh;
-            transform: rotate(0deg);
-        }
-        footer {
-            margin-left: 5%;
-            width: 25vw;
-            padding: 10px;
-            margin-bottom: 50px;
-            border: 2px solid black;
-            border-radius: 100px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.5);
-        }
-    </style>
 </head>
 <body>
-        <header>
-            <div class="sky">
-                <div class="control day"></div><div class="control evening"></div>
-                <div class="sun"></div>
+    <header>
+        <div class="nav">
+            <ul class="main_menu" id="main_menu">
+                <div class="menu-open" id="btn"></div>
+                    <img class="menu_img" src="https://upload.wikimedia.org/wikipedia/ru/b/be/Earthworm_Jim_logo.png" alt="Червяк Джим">
+                <a href="#cool_img"><li class="menu_item"> <div class="small_menu_img"></div>Клипарт</li></a>
+                <a href="#articles"><li class="menu_item"> <div class="small_menu_img"></div>Герои</li></a>
+                <a href="#galery"><li class="menu_item"> <div class="small_menu_img"></div>Галерея</li></a>
+                <a href="#contacts"><li class="menu_item"> <div class="small_menu_img"></div>Авторы</li></a>
+            </ul>
+        </div>
+        <div class="free-space"></div>
+    </header>
+    <main>
+        <secton id="cool_img">
+            <div class="cool_img">
+                <img class="clipart_img" src="https://orig00.deviantart.net/e326/f/2015/173/3/3/earthworm_jim_logo_by_ringostarr39-d8ybc6p.png" alt="">
             </div>
-            <div class="sky_free_space2"></div>
-            <div class="nav">
-                <ul class="nav_menu">
-                    <a class="menu_link" href="#landscape_section"><li class="menu_item">Пейзажи</li></a>
-                    <a class="menu_link" href="#cities_section"><li class="menu_item">Города</li></a>
-                    <a class="menu_link" href="#sea_section"><li class="menu_item">Море</li></a>
-                </ul>
-            </div>
-        </header>
-        <div class="sky_free_space"></div>
-        <main>
-            <div class="section landscape" id="landscape_section">
-                <img src="http://images.faso.us/contests/1/100377org.jpg" alt="" class="background_opacity_img">
-                <div class="img_menu">
-                    <input type="checkbox" id="img1_1">
-                    <label for="img1_1" class="img_item img_item1_1"><img class="mini_img" src="http://img1.arrivo.ru/cfcd/19/4842/0/3_Типичный_кипрский_пейзаж_view-flickr.com-_tomasz.cc.jpg" alt=""></label>
-                    <input type="checkbox" id="img1_2">
-                    <label for="img1_2" class="img_item img_item1_2"><img class="mini_img" src="http://s3.amazonaws.com/medias.photodeck.com/b9f401a8-2e63-11e2-b1a2-4bf841527154/Psematismenos-252684_uxga.jpg" alt=""></label>
-                    <input type="checkbox" id="img1_3">
-                    <label for="img1_3" class="img_item img_item1_3"><img class="mini_img" src="http://img-d.photosight.ru/f04/5140547_xlarge.jpg" alt=""></label>
-                    <input type="checkbox" id="img1_4">
-                    <label for="img1_4" class="img_item img_item1_4"><img class="mini_img" src="https://static.tonkosti.ru/images/c/c5/Жиовписный_пейзаж%2C_Кипр.jpg" alt=""></label>
+        </secton>
+        <secton id="articles">
+            <div class="articles_block">
+                <h2>Герои</h2>
+                <div class="art1 article">
+                    <h3>Земляной червяк Джим</h3>
+                    <img class="article_img" src="http://wormjim.ru/images/characters/jim.jpg" alt="Земляной червяк Джим">
+                    <p>Обычный земляной червяк, облаченный в костюм, принцип работы которого он и сам не слишком хорошо понимает. 
+                        Поставленные перед такой непростой задачей, как сохранение суперкостюма от цепкой хватки врагов Джима, 
+                        вы должны будете использовать все, что сможете, чтобы сохранить ему жизнь! Всякие пушки, кнуты, 
+                        плазма-бластеры, хомячки (эмм…) и другие высокотехнологичные штуки!</p><br>
+                        <br>
+                </div>
+                <div class="art2 article">
+                    <h3>Психоворон</h3>
+                    <img src="http://wormjim.ru/images/characters/psy_crow.jpg" alt="Психоворон" class="article_img">
+                    <p>Вороны охотились на Джима всю его жизнь, но ни у одного не было оружия! 
+                        Психоворон намерен любой ценой вернуть костюм Королеве. Из-за его настойчивости 
+                        и больного вороньего ума вы не можете наверняка знать, когда он появится! 
+                        Если он достанет вас своим крюком и вытащит из костюма, Джим станет 
+                        обычной приманкой для окуня. Так что будьте настороже и не закрывайте глаз!</p>
+                </div>
+                <div class="art3 article">
+                    <h3>Принцесса Как-Там-Её-Зовут</h3>
+                    <img src="http://wormjim.ru/images/characters/princess.jpg" alt="Принцесса Как-Там-Её-Зовут" class="article_img">
+                    <p>Сестра-близняшка Королевы. Но ей достались гены получше. 
+                        По-настоящему совершенная крошка, так еще и голубых кровей! 
+                        Когда ее спросили, чем она любит заниматься больше всего, 
+                        она ответила очень мило: «Спасать космических китов, 
+                        а по гороскопу я Весы. Купишь мне космический корабль?»</p>
+                </div>
+                <div class="art4 article">
+                    <h3>Щеночек Питер</h3>
+                    <img src="http://wormjim.ru/images/characters/peter.jpg" alt="Щеночек Питер" class="article_img">
+                    <p>Питер на первый взгляд кажется милым, симпатичным щенком, 
+                        но когда верх берет его альтер-эго, спрятаться от него будет негде. 
+                        Эта прогулка с Питером не будет обычным походом в парк! 
+                        Костюм Джима помог ему пережить путешествие в мир Питера сквозь 
+                        черную дыру, но на пути назад все может сложиться не столь удачно…</p>
                 </div>
             </div>
-            <div class="section cities" id="cities_section">
-                <img src="http://natblog.ru/wp-content/uploads/Pantelis-Zografos_2701/naousa.jpg" alt="" class="background_opacity_img">
-                <div class="img_menu2">
-                        <input type="checkbox" id="img2_1">
-                        <label for="img2_1" class="img_item img_item2_1"><img class="mini_img" src="http://byvali.ru/sites/default/files/pictures/kipr/nicosia/obshaya/nicosia.jpg" alt=""></label>
-                        <input type="checkbox" id="img2_2">
-                        <label for="img2_2" class="img_item img_item2_2"><img class="mini_img" src="http://fototelegraf.ru/wp-content/uploads/2017/10/kipr-10-2.jpg" alt=""></label>
-                        <input type="checkbox" id="img2_3">
-                        <label for="img2_3" class="img_item img_item2_3"><img class="mini_img" src="https://investments.academic.ru/pictures/investments/img1971877_Nikosiya.jpg" alt=""></label>
-                        <input type="checkbox" id="img2_4">
-                        <label for="img2_4" class="img_item img_item2_4"><img class="mini_img" src="https://f.otzyv.ru/f/09/06/32041/310315092428.jpg" alt=""></label>
-                    </div>
+        </secton>
+        <secton id="galery">
+            <h2>Галереия изображений из игры</h2>
+            <div class="img_galery">
+                    <input type="checkbox" id="img01">
+                    <label for="img01" class="img_item img_item01"><img class="mini_img" src="http://www.gamedeus.ru/images/games/E/earthworm-jim-2/earthworm-jim-2-03.JPG" alt=""></label>
+                    <input type="checkbox" id="img02">
+                    <label for="img02" class="img_item img_item02"><img class="mini_img" src="http://static.8gamers.net/images/images/obzoris/11a68e2c814bbcf111ad890b11dd120c/11a68e2c814bbcf111ad890b11dd120c.jpg" alt=""></label>
+                    <input type="checkbox" id="img03">
+                    <label for="img03" class="img_item img_item03"><img class="mini_img" src="https://vgtimes.ru/uploads/gallery/main/14278/193040-earth_worm_jim.jpg" alt=""></label>
+                    <input type="checkbox" id="img04">
+                    <label for="img04" class="img_item img_item04"><img class="mini_img" src="https://manytorrents.pro/_ld/341/04215104.png" alt=""></label>
+                    <input type="checkbox" id="img05">
+                    <label for="img05" class="img_item img_item05"><img class="mini_img" src="https://www.agryt.ru/wp-content/uploads/2017/10/6-12.jpg" alt=""></label>
+                    <input type="checkbox" id="img06">
+                    <label for="img06" class="img_item img_item06"><img class="mini_img" src="http://www.vizzed.com/vizzedboard/retro/user_screenshots/saves25/257477/Earthworm%20Jim%202_Aug31%2014_16_16.png" alt=""></label>
+                    <input type="checkbox" id="img07">
+                    <label for="img07" class="img_item img_item07"><img class="mini_img" src="http://squarefaction.ru/files/game/566/gallery/20141114191040_aaa7b037.png" alt=""></label>
+                    <input type="checkbox" id="img08">
+                    <label for="img08" class="img_item img_item08"><img class="mini_img" src="https://s.cafebazaar.ir/1/upload/screenshot/ir.playgamesoni.khaki3.jpg" alt=""></label>
+                    <input type="checkbox" id="img09">
+                    <label for="img09" class="img_item img_item09"><img class="mini_img" src="http://www.gamewoods.ru/images/Earthworm-Jim-2-online.png" alt=""></label>
+                    <input type="checkbox" id="img10">
+                    <label for="img10" class="img_item img_item10"><img class="mini_img" src="https://images.stopgame.ru/uploads/images/319021/form/1398799819.jpg" alt=""></label>
+                    <input type="checkbox" id="img11">
+                    <label for="img11" class="img_item img_item11"><img class="mini_img" src="http://emusega.ru/bd/imgbigsega/29.png" alt=""></label>
+                    <input type="checkbox" id="img12">
+                    <label for="img12" class="img_item img_item12"><img class="mini_img" src="http://pscd.ru/uploads/posts/2012-01/1326134819_earthworm-jim-2-3.jpg" alt=""></label>
+                </div>
+        </secton>
+        <secton id="contacts">
+            <h2>Авторы игры</h2>
+            <div class="about">
+                <p><img src="https://my-hit.org/storage/1584615_1920x1080x500.jpg" alt="Дуглас ТенНэйпл" class="about_img01">Своим появлением игра, в первую очередь, обязана Дугласу ТенНэйплу — калифорнийскому художнику комиксов 
+                    и аниматору, известному также по компьютерной игре The Neverhood. Его авторству принадлежат все 
+                    ключевые персонажи игры, включая самого Джима. Первым из персонажей игры появился кот Зловред. 
+                    Ещё в 1991 году ТенНэйпел опубликовал короткий комикс с участием злобного кота. Двумя годами позже 
+                    им были придуманы остальные герои будущей игры (сам Джим был создан Дугласом в середине ноября 
+                    1993 года), которых он и представил команде Дэвида Перри. Вначале Перри предложил назвать героя 
+                    будущей игры Лэнсом (Lance — сокращённое от Ланселот), полагая, что имя супергероя должно звучать 
+                    возвышенно. Команда поддержала его идею, однако, ТенНэйпл был непреклонен и оставил за собой 
+                    право наречь собственное «дитя» по-своему. В двух первых играх Джим «говорит» голосом своего 
+                    создателя Дугласа ТенНэйпела. Основным программистом выступил Дэвид Перри — глава студии 
+                    Shiny Entertainment. Звуковую дорожку написал Томми Талларико. В титрах первой игры вместо 
+                    него вписан Марк Миллер — коллега-композитор и большой друг Талларико. Это было сделано умышленно, 
+                    так как в тот момент Томми ещё оставался сотрудником Virgin Interactive и работал над игрой 
+                    втайне от работодателя</p>
+                    <p> <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/SEGA_logo.png" alt="" class="about_img02"> Разработка игры началась в конце 1993 года после основания в октябре того же года самой 
+                        студии Shiny Entertainment. Несколько аниматоров работали над высоко проработанной 
+                        визуальной составляющей игры. Графический движок был заимствован из игры Aladdin для 
+                        Mega Drive/Genesis, созданной ранее Дэвидом Перри в составе компании Virgin. К тому же, 
+                        уровень графики доведён до высокого уровня, что сделало игру одной из самых красивых на 
+                        приставке Mega Drive/Genesis.</p>
             </div>
-            <div class="section sea" id="sea_section">
-                <img src="http://sergeev-art.com/d/142754/d/138.b2ecdbaa0d3b.jpg" alt="" class="background_opacity_img">
-                <div class="img_menu3">
-                        <input type="checkbox" id="img3_1">
-                        <label for="img3_1" class="img_item img_item2_1"><img class="mini_img" src="https://s1.1zoom.ru/big3/757/358178-svetik.jpg" alt=""></label>
-                        <input type="checkbox" id="img3_2">
-                        <label for="img3_2" class="img_item img_item2_2"><img class="mini_img" src="http://zacep.com/wp-content/uploads/2015/07/interesniye-mesta-kipra.jpg" alt=""></label>
-                        <input type="checkbox" id="img3_3">
-                        <label for="img3_3" class="img_item img_item2_3"><img class="mini_img" src="http://lookinhotels.ru/data/public/3811/46328/nice-ocean-view-98191.jpg" alt=""></label>
-                        <input type="checkbox" id="img3_4">
-                        <label for="img3_4" class="img_item img_item2_4"><img class="mini_img" src="https://avatars.mds.yandex.net/get-pdb/51720/97ed6863-00e6-47cf-8fc6-81d86a789710/s1200" alt=""></label>
-                    </div>
-            </div>
-        </main>
-        <footer>
-            <p>Автор: Евгений Степанов<br>
-            На Кипре не был, но хочу побывать =)</p>
-        </footer>
+        </secton>
+    </main>
+    <footer>
+       <div class="me">
+           <div class="me_info">
+               <p>Автор сайта: Евгений Степанов<br>
+                Информация с сайта <cite><a href="http://wormjim.ru/characters/">wormjim.ru</a></cite>
+               </p>
+           </div>
+       </div>
+    </footer>
+    <script>
+        btn.addEventListener('click', function() {
+            main_menu.classList.toggle('main_menu_open');
+        })
+    </script>
+    <secton>
+    </secton>
 </body>
 </html>
