@@ -4,119 +4,56 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Используем медиаконтент</title>
-    <style>
-    @import url('https://fonts.googleapis.com/css?family=Seymour+One');
-@import url('https://fonts.googleapis.com/css?family=Vollkorn+SC');
-
-
-body, html {
-    margin: 0;
-}
-
-.header_main {
-    height: 100vh;
-    position: relative;
-}
-
-.header_video {
-    width: 100vw;
-    height: 100vh;
-    object-fit: cover;
-}
-.video_container {
-    height: 100vh;
-    overflow: hidden;
-}
-.video_opacity {
-    height: 100vh;
-    width: 100vw;
-    background: rgba(255,255,255, 0.5);
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1;
-}
-.emblema {
-    position: absolute;
-    z-index: 2;
-    top: 50px;
-    left: 50px;
-    width: auto;
-    height: 150px;
-    background: rgba(255,255,255, 0.5);
-    border: 1px solid white;
-    border-radius: 20px;
-    box-shadow: 0 0 20px rgba(0,0,0, 1);
-}
-.emblem_img {
-    height: 100%;
-}
-
-.hike_club_label {
-    position: static;
-    height: 100%;
-    transform: scale(-1, 1);
-    box-shadow: 0 0 20px rgba(0,0,0, 1);
-    border-radius: 12px
-}
-.emblem_item {
-    display: inline-block;
-    vertical-align: top;
-    margin-left: 0px;
-}
-.text_block {
-    position: static;
-    
-}
-.club,.club_name {
-    margin: 0;
-    padding: 0;
-    font-family: "Seymour One";
-}
-.club {
-    font-size: 5rem;
-}
-
-.article_block {
-    position: absolute;
-    box-sizing: border-box;
-    z-index: 3;
-    top: 250px;
-    left: 80px;
-    width: 90vw;
-    height: 65vh;
-    background: rgba(76, 230, 251, 0.8);
-    box-shadow: 0 0 20px rgba(0,0,0, 1);
-    overflow-y: scroll;
-    border-radius: 50px;
-    padding: 30px;
-    font-family: "Vollkorn SC"
-}
-
-.letshike {
-    font-size: 2em;
-}
-.hiking_img {
-    width: 300px;
-    border-radius: 20px;
-    border: 10px double black;
-    box-sizing: border-box;
-}
-.left {
-    float: left;
-    margin: 5px 10px 5px 0px;
-}
-.right {
-    float: right;
-    margin: 5px 0px 5px 10px;
-}
-.text-block{
-    height: auto;
-    width: 100%;
-    margin-bottom: 20px;
-}
-</style>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Турклуб "Пойдём в поход"</title>
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+        <script>
+            $(document).ready(function(){
+	            $(".sec1").click(function(){
+                $(".block1").toggleClass("unvisible"); 
+                $(".block2").toggleClass("unvisible", false);
+                $(".block3").toggleClass("unvisible", false);
+                $(".block4").toggleClass("unvisible", false);  
+                return false;
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(".sec2").click(function(){
+                $(".block1").toggleClass("unvisible", false); 
+                $(".block2").toggleClass("unvisible");
+                $(".block3").toggleClass("unvisible", false);
+                $(".block4").toggleClass("unvisible", false);  
+                return false;
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(".sec3").click(function(){
+                $(".block1").toggleClass("unvisible", false); 
+                $(".block2").toggleClass("unvisible", false);
+                $(".block3").toggleClass("unvisible");
+                $(".block4").toggleClass("unvisible", false);  
+                return false;
+                });
+            });
+        </script>
+        <script>
+            $(document).ready(function(){
+                $(".sec4").click(function(){
+                $(".block1").toggleClass("unvisible", false); 
+                $(".block2").toggleClass("unvisible", false);
+                $(".block3").toggleClass("unvisible", false);
+                $(".block4").toggleClass("unvisible");  
+                return false;
+                });
+            });
+        </script>
 </head>
 <body>
         <section class="header_main">
@@ -131,33 +68,119 @@ body, html {
                     <h1 class="club">HIKING CLUB</h1>
                     <h2 class="club_name">"Пойдём в поход!"</h2>
                 </div>
-            </div>
-            <div class="article_block">
-                <div class="text-block">
-                        <img src="./images/mountain-2158661_1280.jpg" alt="Картинка похода" class="hiking_img right">
-                    <p>Устал от города? Хочется бросить все и уехать в далеко? Нет сил чтобы справляться с житейскими проблемами?
-                        Выход есть! <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span>
-                    <p>Наш туристический клуб подходит всем и каждому.</p> 
-                </div>   
-                <div class="text-block">           
-                    <img src="./images/raise-3338589_1280.jpg" alt="Картинка похода" class="hiking_img left">
-                    <p>Ты толстый? <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span> Ты худой? <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span> Ты программист? <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span> Ты БОМЖ? <span class="letshike">Ты уже в походе, Бро!</span></p> 
-                    <p>У нас есть походы с категорией, походы без категории, походы выходного дня, водные походы, конные походы... да вообще подставьте любое слово к слову "походы" и это у нас тоже окажется</p>
-                </div> 
-                <div class="text-block">
-                    <img src="./images/snow-1185474_1280.jpg" alt="Картинка похода" class="hiking_img right">
-                    <p>Мы ходим в Крым, на Кавказ, в Подмосковье, в Европу и Азию, на Тибет и на Тайвань, в Аргинтину и Нидерланды</p>
-                    <p>Наши инструкторы заставят любить походы всех - нельзя просто так взять и разлюбить походы! Ходить любят все, не выдумывай!</p>
-                </div>
-                <div class="text-block">
-                    <img src="./images/trekking-299000_1280.jpg" alt="Картинка похода" class="hiking_img left">
-
-                    <p>Твое лицо будет гореть счастьем. Ты будешь гордиться тем, что пошёл в Поход</p>
-                    <p>В нашем туристическом клубе ты не будешь скучать ни дня! Вставай с дивана и <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span></p>
+                <div class="menu_background">
+                    <a href="#section2"><div class="menu_section sec1"><span class="menu_text">О нас</span></div></a>
+                    <a href="#section2"><div class="menu_section sec2"><span class="menu_text">Походы</span></div></a>
+                    <a href="#section3"><div class="menu_section sec3"><span class="menu_text">Отзывы</span> </div></a>
+                    <a href="#section4"><div class="menu_section sec4"><span class="menu_text">Фоточки</span></div></a>
                 </div>
             </div>
             <div class="video_opacity"></div>
+            <!-- <audio src="./audio/01408.mp3" autoplay loop></audio> -->
         </section>
-        <audio src="./audio/01408.mp3" autoplay loop></audio>
+        <section class="article_block block1" id="section1">
+                    <h2 class="club_name">О нас</h2>
+                        <div class="text-block">
+                                <img src="./images/mountain-2158661_1280.jpg" alt="Картинка похода" class="hiking_img right">
+                            <p>Устал от города? Хочется бросить все и уехать в далеко? Нет сил чтобы справляться с житейскими проблемами?
+                                Выход есть! <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span>
+                            <p>Наш туристический клуб подходит всем и каждому.</p> 
+                        </div>   
+                        <div class="text-block">           
+                            <img src="./images/raise-3338589_1280.jpg" alt="Картинка похода" class="hiking_img left">
+                            <p>Ты толстый? <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span> Ты худой? <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span> Ты программист? <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span> Ты БОМЖ? <span class="letshike">Ты уже в походе, Бро!</span></p> 
+                            <p>У нас есть походы с категорией, походы без категории, походы выходного дня, водные походы, конные походы... да вообще подставьте любое слово к слову "походы" и это у нас тоже окажется</p>
+                        </div> 
+                        <div class="text-block">
+                            <img src="./images/snow-1185474_1280.jpg" alt="Картинка похода" class="hiking_img right">
+                            <p>Мы ходим в Крым, на Кавказ, в Подмосковье, в Европу и Азию, на Тибет и на Тайвань, в Аргинтину и Нидерланды</p>
+                            <p>Наши инструкторы заставят любить походы всех - нельзя просто так взять и разлюбить походы! Ходить любят все, не выдумывай!</p>
+                        </div>
+                        <div class="text-block">
+                            <img src="./images/trekking-299000_1280.jpg" alt="Картинка похода" class="hiking_img left">
+        
+                            <p>Твое лицо будет гореть счастьем. Ты будешь гордиться тем, что пошёл в Поход</p>
+                            <p>В нашем туристическом клубе ты не будешь скучать ни дня! Вставай с дивана и <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span></p>
+                        </div>
+        </section>
+        <section class="article_block block2" id="section2">
+                    <h2 class="club_name">Наши походы</h2>
+                        <h3>Тридцатка</h3>
+                        <div class="route">
+                        <div class="map_box">
+                            <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A64514c5dc21a80ab30dcb7d09e7a28310435ee1105a47807e316ef157b6c149f&amp;source=constructor"frameborder="0"></iframe>
+                        </div>
+                        <div class="text-block">
+                            <p>«Всесоюзная тридцатка». Уникальный маршрут, где можно пройти все ландшафтные зоны, от кубанских чёрнозёмных степей, широколиственных и хвойных лесов поднимаясь к альпийским лугам, вечным снегам и суровым ледникам, и спускаясь на южную сторону Главного Кавказского хребта – к побережью, пальмам, бамбуку и магнолиям.</p>
+                            <p>
+                                Маршрут 30 проходит вблизи знаменитой горы Фишт. Фишт – это один из самых грандиозных и значимых памятников природы России, самые близкие к Москве высокие горы. Туристы налегке проходят все ландшафтные и климатические зоны страны от предгорий до субтропиков, ночёвки в приютах.
+                            </p>
+                        </div>
+                        <h3>Арабика-Рица</h3>
+                        <div class="route">
+                        <div class="map_box">
+                                <iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213983883113511394205.0004d4ac8eebd1f408519&amp;hl=ru&amp;ie=UTF8&amp;t=m&amp;ll=43.422683,40.191951&amp;spn=0.34897,0.583649&amp;z=10&amp;output=embed"></iframe>
+                        </div>
+                        <div class="text-block">
+                                <p>Поход по Абхазии "Арабика - озеро Рица" сочетает в себе разнообразие труднодоступных каньонов с великолепными ландшафтами плато Арабика, громадные пещеры Кавказа, ну и конечно же бесподобные озера Рица - Большую и Малую. Добавлю, что походы в горы Абхазии и конкретно этот поход относится к категории не простых, поэтому желательно иметь некоторый походный опыт.</p>
+                                <p>Адлер - Веселое - граница - Псоу - Гантиади - каньон Хашупсы - Ачмарда - долина Геглеук - плато Арабика - г.Арабика (2656м.) - хр.Каменный клад - скала Дракон - оз.Дзоу - Гегский водопад - г.Пшегишха (2222м.) - оз. Малая Рица - оз. Рица - Бзыбское ущелье - Новый Афон</p>
+                        </div>
+                        <h3>ПВД Замри-Гора</h3>
+                        <div class="route">
+                        <div class="map_box">
+                                <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d43e29a108549b04151208c328cf4cb16d02fdbbe73e90a53c4550975c78993&amp;source=constructor" frameborder="0"></iframe>
+                        </div>
+                        <div class="text-block">
+                            <p>Замри́-гора́ — самая высокая точка Московской области, высота над уровнем моря — 310 м. Расположена возле деревни Шапкино Можайского района. Высшая точка Московской возвышенности.</p>
+                            <p>Священная гора древних славян, с которой связаны их легенды и предания. На Иванов день к Замри-горе тянулись со всей Московии скоморохи. Они устраивали свои представления, а волхвы разводили костры и проводили обряды. В заветном тайнике скоморохи хранили серебряную маску. На праздник маску доставали, каждый надевал её и загадывал желание.</p>
+                        </div>
+                    </div>
+        </section>
+        <section class="article_block block3" id="section3">
+                <h2 class="club_name">Отзывы</h2>
+                <div class="feedback">
+                    <div class="avatar avatar1"></div>
+                    <div class="text-block">
+                        <p>"В походе заново рождаешься</p>
+                        <p>Понимаешь, что в городе все сутета, а тут вечность</p>
+                        <p>Если спросят идти или не идти - ответ очевиден</p>
+                        <p>Идти!"</p>
+                        <span class="name">Турист Михалыч</span>
+                    </div>
+                </div>
+                <div class="feedback">
+                    <div class="avatar avatar2"></div>
+                    <div class="text-block">
+                        <p>"Я даже не задумываюсь идти или не идти, когда ответ очевиден</p>
+                        <p>Поход для сильных духом</p>
+                        <p>Пойдем в поход!"</p>
+                        <span class="name">Турист Лебедь</span>
+                    </div>
+                </div>
+                <div class="feedback">
+                        <div class="avatar avatar3"></div>
+                        <div class="text-block">
+                            <p>"Пойдём в поход, говорили они... там будет не сложно, говорили они....</p>
+                            <p>Больше не пойду в поход...</p>
+                            <p>Хоят кого я обманываю! Пойду!"</p>
+                            <span class="name">Турист Евгений</span>
+                        </div>
+                </div>
+        </section>
+        <section class="article_block block4" id="section4">
+                <h2 class="club_name">Фотографии из походов</h2>
+                <div class="big_foto_box">
+                    <div class="foto foto1"></div>
+                    <div class="foto foto2"></div>
+                    <div class="foto foto3"></div>
+                    <div class="foto foto4"></div>
+                    <div class="foto foto5"></div>
+                    <div class="foto foto6"></div>
+                    <div class="foto foto7"></div>
+                    <div class="foto foto8"></div>
+                    <div class="foto foto9"></div>
+                    <div class="foto foto10"></div>
+                </div>
+        </section>
 </body>
 </html>

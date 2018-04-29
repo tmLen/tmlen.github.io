@@ -1,0 +1,275 @@
+@import url('https://fonts.googleapis.com/css?family=Seymour+One');
+@import url('https://fonts.googleapis.com/css?family=Vollkorn+SC');
+
+
+body, html {
+    margin: 0;
+}
+
+.header_main {
+    height: 100vh;
+    position: relative;
+}
+
+.header_video {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+}
+.video_container {
+    height: 100vh;
+    overflow: hidden;
+}
+.video_opacity {
+    height: 100vh;
+    width: 100vw;
+    background: rgba(255,255,255, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.menu_background {
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    background: white;
+    border: 10px double black;
+}
+.menu_section {
+    font-family: "Seymour One"; 
+    font-size: 0.5rem;
+    width: 65px;
+    height: 65px;
+    box-sizing: border-box;
+    border: 1px solid black;
+    color: black;
+    text-decoration: none;
+    
+}
+.menu_section:hover {
+    transition: 1s;
+    background: cyan;
+    box-shadow: 0 0 10px black;
+
+}
+.sec1 {
+    position: absolute;
+    text-align: right;
+    padding-top: 35px;
+    padding-right: 10px;
+    top: 0;
+    left: 0;
+    border-left: none;
+    border-top: none;
+    border-top-left-radius: 100%;
+}
+.sec2 {
+    text-align: left;
+    padding-top: 35px;
+    padding-left: 3px;
+    position: absolute;
+    top: 0px;
+    left: 66px;
+    border-right: none;
+    border-top: none;
+    border-top-right-radius: 100%;
+}
+.sec3 {
+    text-align: right;
+    padding-top: 15px;
+    padding-right: 5px;
+    position: absolute;
+    top: 66px;
+    left:0;
+    border-bottom-left-radius: 100%;
+    border-left: none;
+    border-bottom: none;
+}
+.sec4 {
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 3px;
+    position: absolute;
+    top: 66px;
+    left: 66px;
+    border-bottom-right-radius: 100%;
+    border-right: none;
+    border-bottom: none;
+}
+.emblema {
+    position: absolute;
+    z-index: 2;
+    top: 50px;
+    left: 50px;
+    width: auto;
+    height: 150px;
+    background: rgba(255,255,255, 0.5);
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0,0,0, 1);
+}
+.emblem_img {
+    height: 100%;
+}
+
+.hike_club_label {
+    position: static;
+    height: 100%;
+    transform: scale(-1, 1);
+    box-shadow: 0 0 20px rgba(0,0,0, 1);
+    border-radius: 12px
+}
+.emblem_item {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 0px;
+}
+.text_block {
+    position: static;
+    
+}
+.club,.club_name {
+    margin: 0;
+    padding: 0;
+    font-family: "Seymour One";
+}
+.club {
+    font-size: 5rem;
+}
+
+.article_block {
+    position: absolute;
+    box-sizing: border-box;
+    z-index: 3;
+    top: 250px;
+    left: 80px;
+    display: none;
+    width: 90vw;
+    height: 65vh;
+    background: rgba(76, 230, 251, 0.8);
+    box-shadow: 0 0 20px rgba(0,0,0, 1);
+    overflow-y: scroll;
+    border-radius: 50px;
+    padding: 30px;
+    font-family: "Vollkorn SC"
+}
+.unvisible {
+    display: block;
+}
+.letshike {
+    font-size: 2em;
+}
+.hiking_img {
+    width: 300px;
+    border-radius: 20px;
+    border: 10px double black;
+    box-sizing: border-box;
+}
+.left {
+    float: left;
+    margin: 5px 10px 5px 0px;
+}
+.right {
+    float: right;
+    margin: 5px 0px 5px 10px;
+}
+.text-block{
+    height: auto;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.map {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+.map_box {
+    display: inline-block;
+}
+.map_box ~ .text-block {
+    vertical-align: top;
+    width: 60%;
+    margin-left: 20px;
+    display: inline-block;
+}
+.feedback {
+    vertical-align: top;
+    box-sizing: border-box;
+    position: relative;
+    display: inline-block;
+    width: 350px;
+    height: 80vh;
+    margin-top: 10px;
+    margin-left: 30px;
+    background: white;
+    text-align: center;
+    border-radius: 50px;
+    border: 2px solid black;
+    font-style: italic;
+}
+.avatar {
+    margin: 10px 75px;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 2px solid black;
+    box-shadow: 0 0 20px black;
+    
+}
+.avatar1 {
+    background: url("./images/GPo3sr42Boo.jpg") 50%/cover no-repeat;
+}
+.avatar2 {
+    background: url("./images/BnjYrpaMrLI.jpg") 50%/cover no-repeat;
+}
+.avatar3 {
+    background: url("./images/vr0HUpelnVc.jpg") 50%/cover no-repeat;
+}
+.foto {
+    margin: 10px;
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    background: white;
+    transition: 1s;
+    box-sizing: border-box;
+    border: 1px solid black;
+}
+.foto:hover {
+    box-shadow: 10px 10px 20px black;
+}
+.foto1 {
+    background: url("./images/-1DnlZ_hB_c.jpg") 50%/cover no-repeat;
+}
+.foto2 {
+    background: url("./images/6trnugcFWXU.jpg") 50%/cover no-repeat;
+}
+.foto3 {
+    background: url("./images/6VVsV5mInF0.jpg") 50%/cover no-repeat;
+}
+.foto4 {
+    background: url("./images/987BTL-GR1E.jpg") 50%/cover no-repeat;
+}
+.foto5 {
+    background: url("./images/CDDEZI32W8E.jpg") 50%/cover no-repeat;
+}
+.foto6 {
+    background: url("./images/EzfO-06pn4o.jpg") 50%/cover no-repeat;
+}
+.foto7 {
+    background: url("./images/jUo1OSnwnLI.jpg") 50%/cover no-repeat;
+}
+.foto8 {
+    background: url("./images/oXAiufH2lN0.jpg") 50%/cover no-repeat;
+}
+.foto9 {
+    background: url("./images/37od2qNRW2w.jpg") 50%/cover no-repeat;
+}
+.foto10 {
+    background: url("./images/nz7Lk_S_jIA.jpg") 50%/cover no-repeat;
+}
