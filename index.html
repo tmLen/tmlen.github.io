@@ -4,187 +4,419 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Город Одинцово</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <title>Турклуб "Пойдём в поход"</title>
+    <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
     <script
-        src="https://code.jquery.com/jquery-3.3.1.min.js"
-        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-        crossorigin="anonymous"></script>
-        <script>
-            $(document).ready(function(){
-	            $(".sec1").click(function(){
-                $(".block1").toggleClass("unvisible"); 
-                $(".block2").toggleClass("unvisible", false);
-                $(".block3").toggleClass("unvisible", false);
-                $(".block4").toggleClass("unvisible", false);  
-                return false;
-                });
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){
+            $(".kings_button").click(function(){
+            $(".kings_russia").toggleClass("unvisible"); 
+            $(".ussr").toggleClass("unvisible", false);
+            $(".prestnt_russia").toggleClass("unvisible", false);
+            return false;
             });
-        </script>
-        <script>
-            $(document).ready(function(){
-                $(".sec2").click(function(){
-                $(".block1").toggleClass("unvisible", false); 
-                $(".block2").toggleClass("unvisible");
-                $(".block3").toggleClass("unvisible", false);
-                $(".block4").toggleClass("unvisible", false);  
-                return false;
-                });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".ussr_button").click(function(){
+            $(".ussr").toggleClass("unvisible"); 
+            $(".kings_russia").toggleClass("unvisible", false);
+            $(".prestnt_russia").toggleClass("unvisible", false); 
+            return false;
             });
-        </script>
-        <script>
-            $(document).ready(function(){
-                $(".sec3").click(function(){
-                $(".block1").toggleClass("unvisible", false); 
-                $(".block2").toggleClass("unvisible", false);
-                $(".block3").toggleClass("unvisible");
-                $(".block4").toggleClass("unvisible", false);  
-                return false;
-                });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".present_button").click(function(){
+            $(".prestnt_russia").toggleClass("unvisible"); 
+            $(".ussr").toggleClass("unvisible", false);
+            $(".kings_russia").toggleClass("unvisible", false); 
+            return false;
             });
-        </script>
-        <script>
-            $(document).ready(function(){
-                $(".sec4").click(function(){
-                $(".block1").toggleClass("unvisible", false); 
-                $(".block2").toggleClass("unvisible", false);
-                $(".block3").toggleClass("unvisible", false);
-                $(".block4").toggleClass("unvisible");  
-                return false;
-                });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".person_01").click(function(){
+            $(".person_information_01").toggleClass("unvisible"); 
+            return false;
             });
-        </script>
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".person_02").click(function(){
+            $(".person_information_02").toggleClass("unvisible"); 
+            return false;
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".person_03").click(function(){
+            $(".person_information_03").toggleClass("unvisible"); 
+            return false;
+            });
+        });
+    </script>
+    <script>
+        $(document).ready(function(){
+            $(".person_04").click(function(){
+            $(".person_information_04").toggleClass("unvisible"); 
+            return false;
+            });
+        });
+    </script>
+        
 </head>
 <body>
-        <section class="header_main">
-            <div class="video_container">
-                <video autoplay loop src="./video/Bernese Oberland - 9794.mp4" class="header_video"></video>
+    <head>
+        <div class="head_images">
+            <div class="opacity_box"></div>
+            <div class="emblema">Odi<br>City</div>
+        </div>
+        
+    </head>
+    <main>
+    <div class="nav" id="main_menu">
+        <div class="menu_button" id="btn"></div>
+        <ul class="menu_list">
+            <a href="index.html"><img src="./images/gerb.png" alt="Герб Одинцово" class="menu_gerb"></a>
+            <a href="#item_news"><li class="menu_item">Новости города</li></a>
+            <a href="#item_history"><li class="menu_item">История города</li></a>
+            <a href="#item_places"><li class="menu_item">Интересные места</li></a>
+            <a href="#item_people"><li class="menu_item">Известные жители</li></a>
+            <a href="./galery.html"><li class="menu_item">Галерея</li></a>
+        </ul>
+    </div>
+    <section class="void_imposition news_section" id="item_news">
+        <h2>Новости Одинцово</h2>
+        <div class="news_lenta">
+            <div class="news">
+                    <script type="text/javascript">var charset='UTF-8';var t=document.getElementsByTagName('meta');for(var i=0; i<t.length; i++){var rg=/charset=["']?([^"']*)/g;if(t[i].content.indexOf('charset')!=-1){charset=rg.exec(t[i].content)[1];break;}}document.write('<script type="text/javascript" src="https://www.rss-script.ru/rss-script.php?charset='+charset+'&rss[]=http%3A%2F%2Fwww.odintsovo.info%2Frss%2F&html=1&notitle=1&count=10"><\/script>');</script><noscript>Для просмотра этой RSS ленты требуется поддержка Java Script</noscript>
             </div>
-            <div class="emblema">
-                <div class="emblem_item emblem_img">
-                    <img src="./images/hiking-43879.svg" alt="Эмблема турклуба" class="hike_club_label">
-                </div>
-                <div class="emblem_item text_block">
-                    <h1 class="club">HIKING CLUB</h1>
-                    <h2 class="club_name">"Пойдём в поход!"</h2>
-                </div>
-                <div class="menu_background">
-                    <a href="#section2"><div class="menu_section sec1"><span class="menu_text">О нас</span></div></a>
-                    <a href="#section2"><div class="menu_section sec2"><span class="menu_text">Походы</span></div></a>
-                    <a href="#section3"><div class="menu_section sec3"><span class="menu_text">Отзывы</span> </div></a>
-                    <a href="#section4"><div class="menu_section sec4"><span class="menu_text">Фоточки</span></div></a>
-                </div>
+        </div>
+    </section>
+    <section class="void_imposition history_section" id="item_history">
+        <h2>История Одинцово</h2>
+        <div class="history_box">
+            <div class="history_button kings_button">Царская<br>Россия</div>
+            <div class="history_button ussr_button">Время<br>СССР</div>
+            <div class="history_button present_button">Наше<br>время</div>
+        </div>
+        <div class="history_information kings_russia">
+            <p>Село Одинцово известно с 1470 года</p>
+            <p>После присоединения в 1514 году Смоленска и его земель к Московскому княжеству Одинцово оказалось на пути важной государевой дороги — Смоленского тракта.</p>
+            <p>В конце XVI века оно стало поместьем Исленьевых, ветви знаменитого рода бояр Вельяминовых-Воронцовых.</p>
+            <p>В 1673 году Одинцово и окрестные земли были куплены боярином Артамоном Сергеевичем Матвеевым — окольничим царя Алексея Михайловича. К концу XVII века в Одинцове уже насчитывалось 22 крестьянских 18 бобыльских дворов, где жил 81 человек.</p>
+            <p>Находясь на Смоленской дороге, Одинцово попало в полосу военных действий во время войны 1812 года. Отходя к Москве, в ночь с 31 августа на 1 сентября 1812 года в соседнем Мамонове останавливались войска Кутузова. Спустя сутки в село вошли французы. Сохранилось распоряжение Наполеона к Иоахиму Мюрату, командовавшему кавалерийским корпусом, о выходе корпуса из Одинцова.</p>
+            <p>С постройкой железной дороги Москва — Смоленск (1870 год) рядом с железнодорожной станцией возник рабочий посёлок Одинцово для железнодорожников и рабочих кирпичных заводов, которые открывались один за другим на богатых одинцовских глинах рядом с железной дорогой. С 1875 по 1895 их открылось шесть: три в посёлке Одинцово и три в селе Одинцово</p>
+        </div>
+        <div class="history_information ussr">
+            <p>В октябре 1917 г. в Одинцове появились ячейки большевиков. К 1917 г. в посёлке проживало до тысячи человек и 3 июля 1918 г. был образован Одинцовский район, объединив 29 селений, расположенных вокруг.</p>
+            <p>Перепись 1926 г. застаёт в селе 95 хозяйств и 411 жителей, а в посёлке Одинцово-Отрадное 2133 человека.</p>
+            <p>В начале Великой Отечественной войны в одной из школ разместился полевой военный госпиталь № 174, который принимал раненых воинов. Одинцово стало ближним тылом частей и подразделений 5-й и 33-й армий Западного фронта во время битвы под Москвой. Акишевскую школу занял штаб одного из полков 21-й Московской дивизии народного ополчения. Ополченцы вместе с одинцовскими жителями сооружали линию обороны в районе Перхушково. Местные предприятия перешли на выпуск военной продукции. Кирпичный завод освоил производство противопехотных и противотанковых мин. Завод бытовой химии изготавливал специальные защитные маскировочные краски, мебельный комбинат-ящики для снарядов и патронов.</p>
+            <p>В 1957 году в посёлке проживало уже 20,3 тыс. человек. 17 июля 1957 года он был преобразован в город с включением в его черту посёлков Красная, Верхнее и Нижнее Отрадное, Железнодорожный и деревни Яскино.</p>
+        </div>
+        <div class="history_information prestnt_russia">
+            <p>Город делится на несколько номерных микрорайонов (№ 1, 1а, 2, 3, 4, 5, 5а, 5б, 6, 7, 8, 9), а также микрорайоны «Отрадное», «Баковка», «Кутузовский» и Новая Трёхгорка. Также в городе выделяют Центральную зону и Восточную, Южную и Западную промзоны. Как в городе, так и в Одинцовском районе ведётся массированное жилищное строительство.</p>
+            <p>С 2010 года город становится домом российских авиаторов. Многие работники этой сферы проживают здесь и трудятся в столичных аэропортах.</p>
+            <p>На 1 января 2017 года по численности населения город находился на 126 месте из 1112 городов Российской Федерации</p>
+            <p>Одинцово занимает первое место в рейтинге городов России по плотности населения — на квадратный километр общей территории ​приходится 7031 человек. Для сравнения, даже в китайском Шанхае плотность населения значительно меньше — 3754 чел/км²</p>
+        </div>
+    </section>
+    <section class="void_imposition map_section" id="item_places">
+        <h2>Интересные места</h2>
+        <div class="map_box">
+                <iframe class="main_map"src="https://yandex.ru/map-widget/v1/?um=constructor%3A2c923cd87bc1e73d07279148d28f054abfbddfe05a1a2c10689823fcb8c88dd5&amp;source=constructor"frameborder="0"></iframe>
+        </div>
+        <a href="./places.html"> <div class="more_news">Подробнее об интересных местах</div></a>
+    </section>
+    <section class="void_imposition people_section" id="item_people">
+        <h2>Известные жители</h2>
+        <div class="people_box person_01">
+            <div class="people_avatar">
+                <img class="people_img" src="./images/odinec.png" alt="Купец Одинец">
+                <h3>Андрей Иванович Одинец</h3>
             </div>
-            <div class="video_opacity"></div>
-            <audio src="./audio/01408.mp3" autoplay loop></audio>
-        </section>
-        <section class="article_block block1" id="section1">
-                    <h2 class="club_name">О нас</h2>
-                        <div class="text-block">
-                                <img src="./images/mountain-2158661_1280.jpg" alt="Картинка похода" class="hiking_img right">
-                                <p>Наш клуб называется <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span></p>
-                            <p>Устал от города? Хочется бросить все и уехать в далеко? Нет сил чтобы справляться с житейскими проблемами?
-                                Выход есть! <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span>
-                            <p>Наш туристический клуб подходит всем и каждому. Не нужно никаких особенных знаний и больших денег!</p> 
-                        </div>   
-                        <div class="text-block">           
-                            <img src="./images/raise-3338589_1280.jpg" alt="Картинка похода" class="hiking_img left">
-                            <p>Ты толстый? <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span> Ты худой? <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span> Ты программист? <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span> Ты БОМЖ? <span class="letshike">Ты уже в походе, Бро!</span></p> 
-                            <p>У нас есть походы с категорией, походы без категории, походы выходного дня, водные походы, конные походы... да вообще подставьте любое слово к слову "походы" и это у нас тоже окажется</p>
-                            <p>Пойти в поход дешевле, чем остаться на отпуск дома - там негде тратить деньги</p>
-                        </div> 
-                        <div class="text-block">
-                            <img src="./images/snow-1185474_1280.jpg" alt="Картинка похода" class="hiking_img right">
-                            <p>Мы ходим в Крым, на Кавказ, в Подмосковье, в Европу и Азию, на Тибет и на Тайвань, в Аргинтину и Нидерланды</p>
-                            <p>Наши инструкторы заставят любить походы всех - нельзя просто так взять и разлюбить походы! Ходить любят все, не выдумывай!</p>
-                            <p>Мы выбираем только самые красивые и интересные машруты. С нам работают опытные проводники. Если вы пойдете с нами в поход, то беспокоиться придется только о том, что поход кончится</p>
-                            <p>Сотни туристов пошни с нами.</p>
-                        </div>
-                        <div class="text-block">
-                            <img src="./images/trekking-299000_1280.jpg" alt="Картинка похода" class="hiking_img left">
-                            <p>Твое лицо будет гореть счастьем. Ты будешь гордиться тем, что пошёл в Поход</p>
-                            <p>В нашем туристическом клубе ты не будешь скучать ни дня! Вставай с дивана и <span class="letshike">Пойдём&nbsp;в&nbsp;поход!</span></p>
-                        </div>
-        </section>
-        <section class="article_block block2" id="section2">
-                    <h2 class="club_name">Наши походы</h2>
-                        <h3>Тридцатка</h3>
-                        <div class="route">
-                        <div class="map_box">
-                            <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A64514c5dc21a80ab30dcb7d09e7a28310435ee1105a47807e316ef157b6c149f&amp;source=constructor"frameborder="0"></iframe>
-                        </div>
-                        <div class="text-block">
-                            <p>«Всесоюзная тридцатка». Уникальный маршрут, где можно пройти все ландшафтные зоны, от кубанских чёрнозёмных степей, широколиственных и хвойных лесов поднимаясь к альпийским лугам, вечным снегам и суровым ледникам, и спускаясь на южную сторону Главного Кавказского хребта – к побережью, пальмам, бамбуку и магнолиям.</p>
-                            <p>
-                                Маршрут 30 проходит вблизи знаменитой горы Фишт. Фишт – это один из самых грандиозных и значимых памятников природы России, самые близкие к Москве высокие горы. Туристы налегке проходят все ландшафтные и климатические зоны страны от предгорий до субтропиков, ночёвки в приютах.
-                            </p>
-                        </div>
-                        <h3>Арабика-Рица</h3>
-                        <div class="route">
-                        <div class="map_box">
-                                <iframe class="map" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps/ms?msa=0&amp;msid=213983883113511394205.0004d4ac8eebd1f408519&amp;hl=ru&amp;ie=UTF8&amp;t=m&amp;ll=43.422683,40.191951&amp;spn=0.34897,0.583649&amp;z=10&amp;output=embed"></iframe>
-                        </div>
-                        <div class="text-block">
-                                <p>Поход по Абхазии "Арабика - озеро Рица" сочетает в себе разнообразие труднодоступных каньонов с великолепными ландшафтами плато Арабика, громадные пещеры Кавказа, ну и конечно же бесподобные озера Рица - Большую и Малую. Добавлю, что походы в горы Абхазии и конкретно этот поход относится к категории не простых, поэтому желательно иметь некоторый походный опыт.</p>
-                                <p>Адлер - Веселое - граница - Псоу - Гантиади - каньон Хашупсы - Ачмарда - долина Геглеук - плато Арабика - г.Арабика (2656м.) - хр.Каменный клад - скала Дракон - оз.Дзоу - Гегский водопад - г.Пшегишха (2222м.) - оз. Малая Рица - оз. Рица - Бзыбское ущелье - Новый Афон</p>
-                        </div>
-                        <h3>ПВД Замри-Гора</h3>
-                        <div class="route">
-                        <div class="map_box">
-                                <iframe class="map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A9d43e29a108549b04151208c328cf4cb16d02fdbbe73e90a53c4550975c78993&amp;source=constructor" frameborder="0"></iframe>
-                        </div>
-                        <div class="text-block">
-                            <p>Замри́-гора́ — самая высокая точка Московской области, высота над уровнем моря — 310 м. Расположена возле деревни Шапкино Можайского района. Высшая точка Московской возвышенности.</p>
-                            <p>Священная гора древних славян, с которой связаны их легенды и предания. На Иванов день к Замри-горе тянулись со всей Московии скоморохи. Они устраивали свои представления, а волхвы разводили костры и проводили обряды. В заветном тайнике скоморохи хранили серебряную маску. На праздник маску доставали, каждый надевал её и загадывал желание.</p>
-                        </div>
-                    </div>
-        </section>
-        <section class="article_block block3" id="section3">
-                <h2 class="club_name">Отзывы</h2>
-                <div class="feedback">
-                    <div class="avatar avatar1"></div>
-                    <div class="text-block">
-                        <p>"В походе заново рождаешься</p>
-                        <p>Понимаешь, что в городе все сутета, а тут вечность</p>
-                        <p>Если спросят идти или не идти - ответ очевиден</p>
-                        <p>Идти!"</p>
-                        <div class="tourist_name">Турист Михалыч</div>
-                    </div>
+            <div class="people_information person_information_01">
+                <p>Свое название город Одинцово получил от прозвища боярина великого князя Дмитрия Донского — Андрея Ивановича Одинца, жившего во второй половине XIV века и принадлежащего к старинному боярскому роду. Поместье находилось в руках рода Одинцовых, пока внук Андрея Ивановича — Федосий, чем-то не разгневал великого князя Василия Темного и вынужден был сбежать в Литву, где и умер. Одинцово отдается во владение различным лицам, пока в конце XVI века оно стало поместьем Исленьевых, ветви знаменитого рода бояр Вельяминовых-Воронцовых.</p>
+            </div>
+        </div>
+        <div class="people_box person_02">
+            <div class="people_avatar">
+                <img class="people_img" src="./images/Tolubko_VF.jpg" alt="Толубко В.Ф.">
+                <h3>Владимир Федорович Толубко</h3>
+            </div>
+            <div class="people_information person_information_02">
+                <p><span class="life">(12 ноября 1914 17 июня 1989)</span><br>Советский военачальник, главный маршал артиллерии, заместитель министра обороны СССР, главнокомандующий РВСН, Герой Социалистического Труда. Член ЦК КПСС. Депутат Верховного Совета СССР 8-11 созывов.</p>
+            </div>
+        </div>
+        <div class="people_box person_03">
+                <div class="people_avatar">
+                    <img class="people_img" src="./images/dubasov.jpg" alt="Дубасов И.И.">
+                    <h3>Иван Иванович Дубасов</h3>
                 </div>
-                <div class="feedback">
-                    <div class="avatar avatar2"></div>
-                    <div class="text-block">
-                        <p>"Я даже не задумываюсь идти или не идти, я не имею права остаться дома</p>
-                        <p>Поход для сильных духом</p>
-                        <p>Пойдем в поход!"</p>
-                        <div class="tourist_name">Турист Лебедь</div>
-                    </div>
+                <div class="people_information person_information_03">
+                    <p>(30 ноября 1897, Одинцово, Московская губерния — 15 марта 1988, Москва)<br>
+                        Русский советский художник и гравёр.
+                        Главный художник Гознака (1932—1971), заслуженный деятель искусств РСФСР (1959). Разрабатывал эскизы и оригиналы многих советских денежных знаков, государственных наград и почтовых марок на протяжении нескольких десятилетий. Награждён орденами Ленина, Трудового Красного Знамени, «Знак Почёта», рядом медалей.</p>
                 </div>
-                <div class="feedback">
-                        <div class="avatar avatar3"></div>
-                        <div class="text-block">
-                            <p>"Пойдём в поход, говорили они... там будет не сложно, говорили они....</p>
-                            <p>Больше не пойду в поход...</p>
-                            <p>Хоят кого я обманываю! Пойду!"</p>
-                        </div>
-                        <div class="tourist_name">Турист Евгений</div>
-
+        </div>
+        <div class="people_box person_04">
+                <div class="people_avatar">
+                    <img class="people_img" src="./images/lazutina.jpg" alt="Лариса Лазутина">
+                    <h3>Лариса Евгеньевна Лазутина</h3>
                 </div>
-        </section>
-        <section class="article_block block4" id="section4">
-                <h2 class="club_name">Фотографии из походов</h2>
-                <div class="big_foto_box">
-                    <div class="foto foto1"></div>
-                    <div class="foto foto2"></div>
-                    <div class="foto foto3"></div>
-                    <div class="foto foto4"></div>
-                    <div class="foto foto5"></div>
-                    <div class="foto foto6"></div>
-                    <div class="foto foto7"></div>
-                    <div class="foto foto8"></div>
-                    <div class="foto foto9"></div>
-                    <div class="foto foto10"></div>
+                <div class="people_information person_information_04">
+                        <p>Лазутина Лариса Евгеньевна родилась 1 июня 1965 года в г. Кондопоге (республика Карелия) в семье рабочих. В 1972 году поступила в Кондопожскую среднюю школу №1. В пятом классе начала заниматься лыжным спортом. По окончании школы поступила в Хабаровский институт физической культуры, который закончила, получив специальность тренера-преподавателя. В 1989 году, будучи членом сборной команды СССР по лыжным гонкам, переехала в г. Одинцово. В период с 1990 по 1998 гг. Лариса Лазутина стала пятикратной олимпийской чемпионкой Олимпийских игр, одиннадцатикратной чемпионкой мира, двухкратной обладательницей Кубка Мира, многократной чемпионкой СССР и России, заслуженным мастером спорта. После успешных стартов на Олимпийских играх в Лиллехаммере (1994 г.) Лариса была награждена орденом Дружбы народов, а после Олимпиады в Нагано (1998 г.) стала Героем России.</p>
                 </div>
-        </section>
+        </div>
+    </section>
+    </main>
+    <footer class="odi_footer">
+        <p class="author">Разработчик: Евгений Степанов</p>
+            <svg xmlns="http://www.w3.org/2000/svg" class="city_svg" viewBox="250 0 150 160">
+                <title>Одинцово в движении</title>
+                <desc>Планата Одинцово в движении, показываем значимые места, приглашаем в гости</desc>
+                <g class="odi_svg">
+                    <animateTransform attributeName="transform"
+                        type="rotate"
+                        from="0 354.131 434" to="-360 354.131 434"
+                        begin="0s" dur="40s"
+                        repeatCount="indefinite" restart="whenNotActive"
+                     />
+                <path d=" M 155.473 643.639 C 32.945 521.11 32.944 322.157 155.472 199.629 C 278 77.1 476.954 77.101 599.482 199.629 C 722.01 322.157 722.01 521.11 599.482 643.639 C 476.954 766.167 278 766.166 155.473 643.639 Z " fill="rgb(70,70,70)"/>
+                <rect x="117.85" y="96.603" width="57.769" height="101.724" transform="matrix(0.707,-0.707,0.707,0.707,-61.296,146.948)" fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <rect x="105.703" y="124.656" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-60.025,114.994)" fill="rgb(255,255,0)"/>
+                <rect x="115.916" y="114.443" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-49.812,119.225)" fill="rgb(255,255,0)"/>
+                <rect x="126.128" y="104.231" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-39.6,123.455)" fill="rgb(255,255,0)"/>
+                <rect x="116.943" y="135.895" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-64.681,126.234)" fill="rgb(255,255,0)"/>
+                <rect x="127.155" y="125.683" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-54.468,130.464)" fill="rgb(255,255,0)"/>
+                <rect x="137.367" y="115.47" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-44.256,134.694)" fill="rgb(255,255,0)"/>
+                <rect x="116.943" y="135.895" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-64.681,126.234)" fill="rgb(255,255,0)"/>
+                <rect x="127.155" y="125.683" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-54.468,130.464)" fill="rgb(255,255,0)"/>
+                <rect x="137.367" y="115.47" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-44.256,134.694)" fill="rgb(255,255,0)"/>
+                <rect x="128.181" y="147.134" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-69.336,137.473)" fill="rgb(255,255,0)"/>
+                <rect x="138.394" y="136.921" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-59.123,141.703)" fill="rgb(255,255,0)"/>
+                <rect x="148.606" y="126.709" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-48.911,145.933)" fill="rgb(255,255,0)"/>
+                <rect x="139.421" y="158.373" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-73.991,148.712)" fill="rgb(255,255,0)"/>
+                <rect x="149.634" y="148.161" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-63.779,152.942)" fill="rgb(255,255,0)"/>
+                <rect x="159.846" y="137.949" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-53.567,157.172)" fill="rgb(255,255,0)"/>
+                <rect x="150.66" y="169.612" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-78.647,159.951)" fill="rgb(255,255,0)"/>
+                <rect x="160.872" y="159.399" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-68.434,164.181)" fill="rgb(255,255,0)"/>
+                <rect x="171.084" y="149.187" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-58.222,168.411)" fill="rgb(255,255,0)"/>
+                <rect x="161.898" y="180.851" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-83.302,171.19)" fill="rgb(255,255,0)"/>
+                <rect x="172.111" y="170.638" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-73.089,175.42)" fill="rgb(255,255,0)"/>
+                <rect x="182.323" y="160.426" width="6.19" height="10.596" transform="matrix(0.707,-0.707,0.707,0.707,-62.877,179.65)" fill="rgb(255,255,0)"/>
+                <rect x="65.837" y="119.597" width="70.328" height="120.562" transform="matrix(0.707,-0.707,0.707,0.707,-97.61,124.103)" fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <rect x="51.944" y="153.174" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-96.432,86.097)" fill="rgb(255,255,0)"/>
+                <rect x="64.377" y="140.741" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-84,91.246)" fill="rgb(255,255,0)"/>
+                <rect x="76.808" y="128.31" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-71.568,96.396)" fill="rgb(255,255,0)"/>
+                <rect x="65.265" y="166.494" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-101.95,99.417)" fill="rgb(255,255,0)"/>
+                <rect x="77.697" y="154.062" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-89.518,104.567)" fill="rgb(255,255,0)"/>
+                <rect x="90.129" y="141.63" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-77.086,109.716)" fill="rgb(255,255,0)"/>
+                <rect x="65.265" y="166.494" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-101.95,99.417)" fill="rgb(255,255,0)"/>
+                <rect x="77.697" y="154.062" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-89.518,104.567)" fill="rgb(255,255,0)"/>
+                <rect x="90.129" y="141.63" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-77.086,109.716)" fill="rgb(255,255,0)"/>
+                <rect x="78.585" y="179.814" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-107.467,112.738)" fill="rgb(255,255,0)"/>
+                <rect x="91.018" y="167.382" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-95.035,117.887)" fill="rgb(255,255,0)"/>
+                <rect x="103.449" y="154.95" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-82.603,123.037)" fill="rgb(255,255,0)"/>
+                <rect x="91.905" y="193.134" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-112.985,126.057)" fill="rgb(255,255,0)"/>
+                <rect x="104.337" y="180.702" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-100.552,131.207)" fill="rgb(255,255,0)"/>
+                <rect x="116.769" y="168.27" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-88.121,136.356)" fill="rgb(255,255,0)"/>
+                <rect x="105.225" y="206.455" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-118.502,139.378)" fill="rgb(255,255,0)"/>
+                <rect x="117.658" y="194.022" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-106.07,144.528)" fill="rgb(255,255,0)"/>
+                <rect x="130.089" y="181.591" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-93.638,149.677)" fill="rgb(255,255,0)"/>
+                <rect x="118.546" y="219.775" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-124.02,152.698)" fill="rgb(255,255,0)"/>
+                <rect x="130.978" y="207.343" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-111.587,157.848)" fill="rgb(255,255,0)"/>
+                <rect x="143.41" y="194.911" width="7.535" height="12.558" transform="matrix(0.707,-0.707,0.707,0.707,-99.156,162.997)" fill="rgb(255,255,0)"/>
+                <path d=" M 364.735 48.34 L 358.998 48.34 L 358.998 56 L 371.374 56 L 371.112 48.34 L 358.37 48.34 L 371.374 57 L 371.112 49 L 358.998 56 L 358.998 65 L 371.015 65 L 371.112 57 L 358.998 65 L 358.37 56 L 371.374 65 L 371.374 74 L 358.998 74 L 358.998 65 L 371.112 74 L 371.112 65 L 358.998 74 L 358.998 82 L 371.374 82 L 371.374 74 L 358.998 82 L 358.998 74 L 371.112 82 L 371.112 91.076 L 358.998 91.076 L 358.998 82 L 370.537 91.076 L 371.112 82 L 358.37 91.076" fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="365.363" y1="48.34" x2="365.363" y2="30.188" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 363.48 29.56 C 363.479 28.52 364.323 27.676 365.363 27.676 C 366.403 27.676 367.246 28.52 367.247 29.56 C 367.247 30.6 366.403 31.444 365.363 31.444 C 364.323 31.443 363.48 30.6 363.48 29.56 Z " fill="rgb(255,0,0)"/>
+                <rect x="337.024" y="95.465" width="3.767" height="18.228" transform="matrix(1,0,0,1,0,0)" fill="rgb(96,125,139)"/>
+                <path d=" M 330.827 95.492 C 330.827 90.987 334.485 87.329 338.99 87.329 C 343.495 87.329 347.153 90.987 347.153 95.492 C 347.153 99.997 343.495 103.655 338.99 103.655 C 334.485 103.655 330.828 99.997 330.827 95.492 Z " fill="rgb(20,113,18)"/>
+                <rect x="346.441" y="95.464" width="3.767" height="18.228" transform="matrix(1,0,0,1,0,0)" fill="rgb(96,125,139)"/>
+                <path d=" M 340.245 95.492 C 340.245 90.987 343.903 87.329 348.409 87.329 C 352.914 87.329 356.572 90.987 356.572 95.492 C 356.572 99.997 352.914 103.655 348.408 103.655 C 343.904 103.655 340.246 99.997 340.245 95.492 Z " fill="rgb(20,113,18)"/>
+                <rect x="354.602" y="92.325" width="3.767" height="18.228" transform="matrix(1,0,0,1,0,0)" fill="rgb(96,125,139)"/>
+                <path d=" M 348.409 92.352 C 348.409 87.848 352.067 84.19 356.572 84.189 C 361.078 84.189 364.735 87.847 364.735 92.353 C 364.735 96.858 361.077 100.516 356.573 100.516 C 352.067 100.516 348.409 96.858 348.409 92.352 Z " fill="rgb(20,113,18)"/>
+                <rect x="358.998" y="94.129" width="3.767" height="18.228" transform="matrix(1,0,0,1,0,0)" fill="rgb(96,125,139)"/>
+                <path d=" M 352.804 94.157 C 352.804 89.652 356.462 85.994 360.967 85.994 C 365.473 85.994 369.131 89.652 369.131 94.157 C 369.13 98.662 365.472 102.32 360.968 102.32 C 356.462 102.32 352.804 98.662 352.804 94.157 Z " fill="rgb(20,113,18)"/>
+                <rect x="369.044" y="94.128" width="3.767" height="18.228" transform="matrix(1,0,0,1,0,0)" fill="rgb(96,125,139)"/>
+                <path d=" M 362.852 94.157 C 362.852 89.652 366.509 85.994 371.015 85.994 C 375.519 85.994 379.177 89.652 379.177 94.157 C 379.177 98.663 375.52 102.32 371.015 102.32 C 366.509 102.32 362.851 98.662 362.852 94.157 Z " fill="rgb(20,113,18)"/>
+                <rect x="379.09" y="94.126" width="3.767" height="18.228" transform="matrix(1,0,0,1,0,0)" fill="rgb(96,125,139)"/>
+                <path d=" M 372.898 94.157 C 372.898 89.652 376.556 85.994 381.061 85.994 C 385.566 85.994 389.224 89.652 389.224 94.157 C 389.225 98.662 385.567 102.32 381.061 102.32 C 376.555 102.32 372.898 98.662 372.898 94.157 Z " fill="rgb(20,113,18)"/>
+                <rect x="387.251" y="95.46" width="3.767" height="18.228" transform="matrix(1,0,0,1,0,0)" fill="rgb(96,125,139)"/>
+                <path d=" M 381.061 95.492 C 381.061 90.987 384.719 87.329 389.224 87.329 C 393.73 87.329 397.387 90.987 397.387 95.492 C 397.387 99.997 393.73 103.655 389.224 103.655 C 384.718 103.655 381.061 99.998 381.061 95.492 Z " fill="rgb(20,113,18)"/>
+                <rect x="397.926" y="97.321" width="3.767" height="18.228" transform="matrix(1,0,0,1,0,0)" fill="rgb(96,125,139)"/>
+                <path d=" M 391.736 97.355 C 391.736 92.849 395.393 89.191 399.898 89.192 C 404.404 89.192 408.062 92.85 408.061 97.355 C 408.062 101.86 404.404 105.518 399.898 105.518 C 395.393 105.518 391.736 101.86 391.736 97.355 Z " fill="rgb(20,113,18)"/>
+                <rect x="364.021" y="94.128" width="3.767" height="18.228" transform="matrix(1,0,0,1,0,0)" fill="rgb(96,125,139)"/>
+                <path d=" M 357.828 94.157 C 357.828 89.652 361.486 85.994 365.991 85.994 C 370.496 85.994 374.154 89.652 374.154 94.157 C 374.153 98.662 370.495 102.32 365.991 102.32 C 361.486 102.32 357.828 98.662 357.828 94.157 Z " fill="rgb(20,113,18)"/>
+                <rect x="328.862" y="97.329" width="3.767" height="18.228" transform="matrix(1,0,0,1,0,0)" fill="rgb(96,125,139)"/>
+                <path d=" M 322.664 97.355 C 322.664 92.849 326.322 89.191 330.827 89.192 C 335.332 89.192 338.99 92.85 338.99 97.355 C 338.99 101.86 335.332 105.518 330.827 105.518 C 326.322 105.518 322.664 101.86 322.664 97.355 Z " fill="rgb(20,113,18)"/>
+                <path d=" M 561.41 177.065 C 564.841 173.635 577.688 180.911 590.08 193.303 C 602.472 205.696 609.748 218.542 606.317 221.972 C 602.886 225.403 590.04 218.128 577.647 205.735 C 565.255 193.343 557.979 180.496 561.41 177.065 Z " fill="rgb(74,134,232)"/>
+                <path d=" M 570.735 185.502 C 572.45 183.787 577.821 186.373 582.722 191.274 C 587.623 196.175 590.211 201.547 588.495 203.262 C 586.78 204.978 581.407 202.391 576.506 197.49 C 571.605 192.589 569.019 187.217 570.735 185.502 Z " fill="rgb(93,93,93)"/>
+                <rect x="592.642" y="184.474" width="5.023" height="10.047" transform="matrix(0.707,0.707,-0.707,0.707,308.312,-365.335)" fill="rgb(23,23,23)"/>
+                <path d=" M 597.818 185.058 L 601.371 183.282 L 599.595 186.834" fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="601.371" y1="183.282" x2="604.923" y2="179.73" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="604.923" y1="179.73" x2="604.035" y2="184.17" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="604.923" y1="179.73" x2="602.259" y2="175.29" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 605.367 177.51 C 605.857 177.02 606.653 177.02 607.143 177.51 C 607.633 178 607.633 178.796 607.143 179.286 C 606.653 179.776 605.857 179.776 605.367 179.286 C 604.877 178.796 604.877 178 605.367 177.51 Z " fill="rgb(23,23,23)"/>
+                <path d=" M 577.395 189.498 L 580.947 193.05 L 582.722 191.274" fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 584.499 191.274 L 582.722 191.274 L 582.722 189.498" fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 581.834 190.386 C 582.324 189.896 583.12 189.896 583.61 190.386 C 584.1 190.876 584.1 191.672 583.61 192.162 C 583.12 192.652 582.324 192.652 581.834 192.162 C 581.344 191.672 581.344 190.876 581.834 190.386 Z " fill="rgb(23,23,23)"/>
+                <line x1="580.947" y1="193.05" x2="578.282" y2="193.938" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="580.947" y1="193.05" x2="580.059" y2="195.714" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="577.395" y1="189.498" x2="574.731" y2="190.386" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="577.395" y1="189.498" x2="576.507" y2="192.162" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 730.506 375.546 L 687.883 375.546 L 687.883 453.379 L 730.506 453.379 C 750.72 426.555 750.683 400.647 730.506 375.546 Z " fill="rgb(255,153,0)" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 716.833 375.547 L 687.883 375.546 L 687.883 453.379 L 716.834 453.379 C 730.563 426.554 730.538 400.648 716.833 375.547 Z " fill="rgb(0,0,255)" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 702.923 407.051 L 687.883 407.051 L 687.883 447.486 L 702.923 447.486 C 710.057 433.55 710.043 420.09 702.923 407.051 Z " fill="rgb(255,255,255)" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 690.855 455.921 C 694.84 455.921 698.075 459.297 698.076 463.456 C 698.076 467.615 694.84 470.991 690.854 470.991 C 686.869 470.991 683.633 467.614 683.633 463.456 C 683.633 459.297 686.869 455.922 690.855 455.921 Z " fill="rgb(23,23,23)"/>
+                <path d=" M 702.923 460.945 C 703.616 460.945 704.179 461.508 704.179 462.201 C 704.179 462.894 703.616 463.456 702.923 463.456 C 702.23 463.456 701.668 462.894 701.668 462.201 C 701.668 461.508 702.23 460.945 702.923 460.945 Z " fill="rgb(23,23,23)"/>
+                <path d=" M 702.923 463.456 C 703.616 463.456 704.179 464.019 704.179 464.712 C 704.179 465.405 703.616 465.968 702.923 465.968 C 702.23 465.968 701.668 465.405 701.668 464.712 C 701.668 464.019 702.23 463.456 702.923 463.456 Z " fill="rgb(23,23,23)"/>
+                <line x1="701.668" y1="462.201" x2="699.186" y2="462.2" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="701.668" y1="464.712" x2="699.186" y2="464.712" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="700.442" y1="464.712" x2="701.698" y2="467.223" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="700.442" y1="462.2" x2="701.668" y2="459.689" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="699.186" y1="462.2" x2="696.675" y2="460.944" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="699.186" y1="464.712" x2="696.675" y2="465.967" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <rect x="607.713" y="631.381" width="1.256" height="6.281" transform="matrix(-0.543,0.84,-0.84,-0.543,1471.479,468.12)" fill="rgb(96,125,139)"/>
+                <path d=" M 613.924 634.948 C 615.149 636.174 615.149 638.163 613.924 639.389 C 612.699 640.614 610.709 640.614 609.483 639.389 C 608.259 638.164 608.259 636.174 609.484 634.949 C 610.71 633.724 612.699 633.724 613.924 634.948 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 603.577 638.732 Q 605.131 628.852 601.821 619.176 Q 593.699 602.989 584.041 606.764 C 574.384 610.538 565.393 639.287 571.609 642.284 C 577.825 645.28 589.813 657.713 590.257 652.052" fill="none" vector-effect="non-scaling-stroke" stroke-width="3" stroke="rgb(162,162,162)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <rect x="608.178" y="620.256" width="1.256" height="6.281" transform="matrix(-0.543,0.84,-0.84,-0.543,1462.853,450.565)" fill="rgb(96,125,139)"/>
+                <path d=" M 614.394 623.821 C 615.618 625.046 615.618 627.036 614.393 628.261 C 613.167 629.487 611.178 629.487 609.953 628.262 C 608.728 627.036 608.728 625.047 609.953 623.821 C 611.178 622.596 613.168 622.596 614.394 623.821 Z " fill="rgb(9,134,9)"/>
+                <rect x="605.295" y="612.939" width="1.256" height="6.281" transform="matrix(-0.543,0.84,-0.84,-0.543,1452.261,441.695)" fill="rgb(96,125,139)"/>
+                <path d=" M 611.511 616.5 C 612.737 617.725 612.737 619.715 611.512 620.94 C 610.287 622.165 608.297 622.165 607.071 620.94 C 605.846 619.714 605.846 617.725 607.071 616.499 C 608.296 615.274 610.286 615.274 611.511 616.5 Z " fill="rgb(9,134,9)"/>
+                <rect x="607.713" y="631.381" width="1.256" height="6.281" transform="matrix(-0.543,0.84,-0.84,-0.543,1471.479,468.12)" fill="rgb(96,125,139)"/>
+                <path d=" M 613.924 634.948 C 615.149 636.174 615.149 638.163 613.924 639.389 C 612.699 640.614 610.709 640.614 609.483 639.389 C 608.259 638.164 608.259 636.174 609.484 634.949 C 610.71 633.724 612.699 633.724 613.924 634.948 Z " fill="rgb(9,134,9)"/>
+                <rect x="609.913" y="626.427" width="1.256" height="6.281" transform="matrix(-0.543,0.84,-0.84,-0.543,1470.713,458.628)" fill="rgb(96,125,139)"/>
+                <path d=" M 616.127 629.995 C 617.352 631.22 617.351 633.209 616.126 634.435 C 614.901 635.66 612.912 635.66 611.687 634.435 C 610.461 633.209 610.461 631.22 611.686 629.995 C 612.911 628.77 614.901 628.77 616.127 629.995 Z " fill="rgb(9,134,9)"/>
+                <rect x="599.45" y="641.781" width="1.256" height="6.278" transform="matrix(-0.839,0.545,-0.545,-0.839,1454.568,859.071)" fill="rgb(96,125,139)"/>
+                <path d=" M 604.368 651.804 L 604.281 645.872 L 599.015 649.292 L 604.368 651.804 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 603.376 650.276 L 603.288 644.344 L 598.022 647.763 L 603.376 650.276 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 602.316 648.645 L 602.229 642.712 L 596.963 646.131 L 602.316 648.645 Z " fill="rgb(9,134,9)"/>
+                <rect x="596.383" y="636.939" width="1.256" height="6.278" transform="matrix(-0.839,0.545,-0.545,-0.839,1446.293,851.837)" fill="rgb(96,125,139)"/>
+                <path d=" M 601.303 646.963 L 601.215 641.03 L 595.949 644.45 L 601.303 646.963 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 600.311 645.435 L 600.223 639.502 L 594.957 642.922 L 600.311 645.435 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 599.251 643.803 L 599.164 637.87 L 593.897 641.29 L 599.251 643.803 Z " fill="rgb(9,134,9)"/>
+                <rect x="597.845" y="631.297" width="1.256" height="6.278" transform="matrix(-0.839,0.545,-0.545,-0.839,1445.909,840.666)" fill="rgb(96,125,139)"/>
+                <path d=" M 602.765 641.321 L 602.678 635.387 L 597.412 638.808 L 602.765 641.321 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 601.772 639.793 L 601.685 633.859 L 596.419 637.279 L 601.772 639.793 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 600.713 638.161 L 600.626 632.228 L 595.359 635.648 L 600.713 638.161 Z " fill="rgb(9,134,9)"/>
+                <rect x="595.722" y="619.379" width="1.256" height="6.278" transform="matrix(-0.839,0.545,-0.545,-0.839,1435.515,819.908)" fill="rgb(96,125,139)"/>
+                <path d=" M 600.643 629.405 L 600.556 623.472 L 595.289 626.891 L 600.643 629.405 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 599.65 627.877 L 599.563 621.943 L 594.297 625.363 L 599.65 627.877 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 598.59 626.244 L 598.503 620.312 L 593.237 623.732 L 598.59 626.244 Z " fill="rgb(9,134,9)"/>
+                <rect x="590.284" y="640.636" width="1.256" height="6.278" transform="matrix(-0.839,0.545,-0.545,-0.839,1437.091,861.955)" fill="rgb(96,125,139)"/>
+                <path d=" M 595.203 650.658 L 595.116 644.725 L 589.85 648.144 L 595.203 650.658 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 594.211 649.13 L 594.124 643.197 L 588.858 646.616 L 594.211 649.13 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 593.152 647.498 L 593.064 641.565 L 587.798 644.985 L 593.152 647.498 Z " fill="rgb(9,134,9)"/>
+                <rect x="597.001" y="644.23" width="1.256" height="6.278" transform="matrix(-0.839,0.545,-0.545,-0.839,1451.399,864.907)" fill="rgb(96,125,139)"/>
+                <path d=" M 601.92 654.253 L 601.833 648.32 L 596.567 651.74 L 601.92 654.253 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 600.927 652.725 L 600.84 646.792 L 595.574 650.211 L 600.927 652.725 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 599.868 651.093 L 599.781 645.16 L 594.514 648.58 L 599.868 651.093 Z " fill="rgb(9,134,9)"/>
+                <rect x="597.845" y="631.297" width="1.256" height="6.278" transform="matrix(-0.839,0.545,-0.545,-0.839,1445.909,840.666)" fill="rgb(96,125,139)"/>
+                <path d=" M 602.765 641.321 L 602.678 635.387 L 597.412 638.808 L 602.765 641.321 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 601.772 639.793 L 601.685 633.859 L 596.419 637.279 L 601.772 639.793 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 600.713 638.161 L 600.626 632.228 L 595.359 635.648 L 600.713 638.161 Z " fill="rgb(9,134,9)"/>
+                <rect x="597.845" y="631.297" width="1.256" height="6.278" transform="matrix(-0.839,0.545,-0.545,-0.839,1445.909,840.666)" fill="rgb(96,125,139)"/>
+                <path d=" M 602.765 641.321 L 602.678 635.387 L 597.412 638.808 L 602.765 641.321 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 601.772 639.793 L 601.685 633.859 L 596.419 637.279 L 601.772 639.793 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 600.713 638.161 L 600.626 632.228 L 595.359 635.648 L 600.713 638.161 Z " fill="rgb(9,134,9)"/>
+                <rect x="597.845" y="631.297" width="1.256" height="6.278" transform="matrix(-0.839,0.545,-0.545,-0.839,1445.909,840.666)" fill="rgb(96,125,139)"/>
+                <path d=" M 602.765 641.321 L 602.678 635.387 L 597.412 638.808 L 602.765 641.321 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 601.772 639.793 L 601.685 633.859 L 596.419 637.279 L 601.772 639.793 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 600.713 638.161 L 600.626 632.228 L 595.359 635.648 L 600.713 638.161 Z " fill="rgb(9,134,9)"/>
+                <path d=" M 581.377 618.307 L 578.713 622.748 L 582.265 624.523" fill="none" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <line x1="584.041" y1="622.747" x2="581.377" y2="627.188" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 431.305 732.103 C 431.387 732.791 430.897 733.417 430.209 733.5 C 429.521 733.583 428.894 733.092 428.811 732.404 C 428.728 731.715 429.219 731.089 429.907 731.007 C 430.596 730.923 431.222 731.415 431.305 732.103 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 408.862 734.812 C 408.945 735.5 408.454 736.127 407.766 736.209 C 407.078 736.293 406.452 735.801 406.368 735.113 C 406.286 734.425 406.777 733.799 407.465 733.716 C 408.152 733.633 408.779 734.124 408.862 734.812 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 412.602 734.36 C 412.686 735.049 412.194 735.675 411.506 735.758 C 410.818 735.84 410.192 735.35 410.109 734.662 C 410.026 733.974 410.517 733.347 411.205 733.264 C 411.894 733.181 412.52 733.672 412.602 734.36 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 427.564 732.554 C 427.647 733.242 427.156 733.868 426.468 733.951 C 425.779 734.034 425.153 733.543 425.071 732.855 C 424.988 732.167 425.479 731.54 426.167 731.458 C 426.855 731.375 427.481 731.866 427.564 732.554 Z " fill="rgb(46,46,46)"/>
+                <rect x="402.733" y="733.719" width="31.397" height="7.535" transform="matrix(-0.993,0.12,-0.12,-0.993,922.478,1419.328)" fill="rgb(13,102,13)"/>
+                <rect x="426.661" y="736.125" width="6.279" height="2.512" transform="matrix(-0.993,0.12,-0.12,-0.993,945.12,1417.752)" fill="rgb(255,255,0)"/>
+                <rect x="419.181" y="737.026" width="6.279" height="2.512" transform="matrix(-0.993,0.12,-0.12,-0.993,930.325,1420.446)" fill="rgb(255,255,0)"/>
+                <rect x="411.702" y="737.928" width="6.279" height="2.512" transform="matrix(-0.993,0.12,-0.12,-0.993,915.529,1423.142)" fill="rgb(255,255,0)"/>
+                <rect x="404.223" y="738.829" width="6.279" height="2.512" transform="matrix(-0.993,0.12,-0.12,-0.993,900.733,1425.838)" fill="rgb(255,255,0)"/>
+                <path d=" M 399.856 735.766 C 399.88 736.459 399.338 737.041 398.645 737.065 C 397.952 737.089 397.37 736.547 397.346 735.854 C 397.322 735.161 397.865 734.58 398.557 734.555 C 399.25 734.531 399.832 735.073 399.856 735.766 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 377.264 736.552 C 377.289 737.245 376.746 737.827 376.053 737.851 C 375.36 737.875 374.778 737.332 374.754 736.639 C 374.73 735.947 375.273 735.365 375.966 735.34 C 376.658 735.317 377.241 735.86 377.264 736.552 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 381.029 736.422 C 381.054 737.114 380.511 737.697 379.818 737.721 C 379.126 737.744 378.544 737.202 378.52 736.509 C 378.496 735.816 379.038 735.234 379.731 735.21 C 380.424 735.186 381.005 735.729 381.029 736.422 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 396.091 735.897 C 396.115 736.59 395.572 737.172 394.879 737.196 C 394.186 737.22 393.604 736.678 393.58 735.985 C 393.556 735.292 394.099 734.71 394.792 734.686 C 395.485 734.662 396.067 735.205 396.091 735.897 Z " fill="rgb(46,46,46)"/>
+                <rect x="371.234" y="736.376" width="31.388" height="7.533" transform="matrix(-0.999,0.035,-0.035,-0.999,799.274,1466.43)" fill="rgb(13,102,13)"/>
+                <rect x="395.132" y="739.749" width="6.277" height="2.511" transform="matrix(-0.999,0.035,-0.035,-0.999,821.984,1467.761)" fill="rgb(255,255,0)"/>
+                <rect x="387.599" y="740.011" width="6.277" height="2.511" transform="matrix(-0.999,0.035,-0.035,-0.999,806.931,1468.545)" fill="rgb(255,255,0)"/>
+                <rect x="380.067" y="740.272" width="6.277" height="2.511" transform="matrix(-0.999,0.035,-0.035,-0.999,791.88,1469.329)" fill="rgb(255,255,0)"/>
+                <rect x="372.533" y="740.533" width="6.277" height="2.511" transform="matrix(-0.999,0.035,-0.035,-0.999,776.827,1470.112)" fill="rgb(255,255,0)"/>
+                <path d=" M 368.146 736.623 C 368.103 737.315 367.506 737.841 366.814 737.796 C 366.122 737.752 365.596 737.156 365.64 736.464 C 365.684 735.772 366.28 735.246 366.972 735.29 C 367.664 735.333 368.19 735.931 368.146 736.623 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 345.586 735.195 C 345.542 735.887 344.946 736.413 344.253 736.369 C 343.562 736.325 343.036 735.728 343.08 735.036 C 343.123 734.345 343.72 733.819 344.412 733.863 C 345.104 733.906 345.629 734.503 345.586 735.195 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 349.347 735.433 C 349.303 736.125 348.705 736.651 348.013 736.607 C 347.321 736.563 346.795 735.966 346.839 735.275 C 346.884 734.582 347.481 734.056 348.172 734.1 C 348.864 734.144 349.39 734.741 349.347 735.433 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 364.387 736.385 C 364.343 737.076 363.745 737.603 363.053 737.559 C 362.362 737.515 361.836 736.918 361.879 736.226 C 361.924 735.534 362.521 735.008 363.212 735.052 C 363.904 735.096 364.43 735.693 364.387 736.385 Z " fill="rgb(46,46,46)"/>
+                <rect x="338.944" y="735.987" width="31.387" height="7.533" transform="matrix(-0.998,-0.063,0.063,-0.998,662.003,1500.363)" fill="rgb(13,102,13)"/>
+                <rect x="362.698" y="740.468" width="6.277" height="2.511" transform="matrix(-0.998,-0.063,0.063,-0.998,684.256,1505.006)" fill="rgb(255,255,0)"/>
+                <rect x="355.178" y="739.99" width="6.277" height="2.511" transform="matrix(-0.998,-0.063,0.063,-0.998,669.261,1503.577)" fill="rgb(255,255,0)"/>
+                <rect x="347.658" y="739.511" width="6.277" height="2.511" transform="matrix(-0.998,-0.063,0.063,-0.998,654.266,1502.147)" fill="rgb(255,255,0)"/>
+                <rect x="340.138" y="739.032" width="6.277" height="2.511" transform="matrix(-0.998,-0.063,0.063,-0.998,639.271,1500.717)" fill="rgb(255,255,0)"/>
+                <path d=" M 336.777 733.951 C 336.667 734.635 336.022 735.102 335.337 734.992 C 334.653 734.882 334.187 734.237 334.297 733.553 C 334.408 732.868 335.052 732.402 335.737 732.512 C 336.421 732.622 336.887 733.267 336.777 733.951 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 314.459 730.362 C 314.348 731.047 313.704 731.512 313.019 731.403 C 312.335 731.293 311.869 730.647 311.978 729.964 C 312.088 729.279 312.733 728.812 313.418 728.923 C 314.102 729.033 314.569 729.678 314.459 730.362 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 318.178 730.961 C 318.068 731.644 317.424 732.111 316.739 732.001 C 316.055 731.89 315.588 731.246 315.698 730.561 C 315.808 729.877 316.453 729.411 317.137 729.521 C 317.822 729.631 318.288 730.276 318.178 730.961 Z " fill="rgb(46,46,46)"/>
+                <path d=" M 333.057 733.353 C 332.947 734.037 332.303 734.504 331.618 734.394 C 330.934 734.283 330.467 733.638 330.577 732.954 C 330.687 732.269 331.332 731.804 332.016 731.914 C 332.701 732.024 333.167 732.669 333.057 733.353 Z " fill="rgb(46,46,46)"/>
+                <rect x="307.468" y="732.067" width="31.388" height="7.533" transform="matrix(-0.987,-0.158,0.158,-0.987,525.663,1513.573)" fill="rgb(13,102,13)"/>
+                <rect x="304.535" y="729.412" width="5.066" height="7.533" transform="matrix(-0.987,-0.158,0.158,-0.987,494.098,1505.747)" fill="rgb(13,102,13)"/>
+                <rect x="330.76" y="737.516" width="6.277" height="2.511" transform="matrix(-0.987,-0.158,0.158,-0.987,546.536,1521.113)" fill="rgb(255,255,0)"/>
+                <rect x="323.322" y="736.317" width="6.277" height="2.511" transform="matrix(-0.987,-0.158,0.158,-0.987,531.942,1517.551)" fill="rgb(255,255,0)"/>
+                <rect x="315.884" y="735.117" width="6.277" height="2.511" transform="matrix(-0.987,-0.158,0.158,-0.987,517.351,1513.988)" fill="rgb(255,255,0)"/>
+                <rect x="308.741" y="733.788" width="6.277" height="2.511" transform="matrix(-0.987,-0.158,0.158,-0.987,503.367,1510.215)" fill="rgb(255,255,0)"/>
+                <rect x="305.169" y="732.685" width="1.869" height="2.512" transform="matrix(-0.993,-0.119,0.119,-0.993,522.838,1499.052)" fill="rgb(255,255,0)"/>
+                <rect x="305.296" y="727.161" width="1.256" height="3.767" transform="matrix(-0.997,0.083,-0.083,-0.997,671.129,1430.273)" fill="rgb(13,102,13)"/>
+                <path d=" M 304.093 735.511 Q 304.595 736.021 290.278 722.952 L 302.837 726.719 Q 303.591 734.999 304.093 735.511 Z " fill="rgb(255,255,0)"/>
+                <rect x="123.297" y="643.775" width="66.56" height="8.791" transform="matrix(-0.707,-0.707,0.707,-0.707,-191.032,1217.212)" fill="rgb(93,93,93)"/>
+                <rect x="159.576" y="660.095" width="3.768" height="12.558" transform="matrix(-0.707,-0.707,0.707,-0.707,-195.568,1251.741)" fill="rgb(93,93,93)"/>
+                <rect x="132.936" y="633.455" width="3.768" height="12.558" transform="matrix(-0.707,-0.707,0.707,-0.707,-222.209,1187.426)" fill="rgb(93,93,93)"/>
+                <path d=" M 157.465 671.259 L 162.793 676.587 L 154.8 677.474 L 122.832 645.506 L 122.831 636.626 L 130.824 644.618 L 157.465 671.259 Z " fill="rgb(93,93,93)"/>
+                <path d=" M 130.38 627.302 L 126.829 630.853 L 122.388 626.413 L 117.947 630.853 L 114.396 627.302 L 109.956 631.742 L 105.516 627.302 L 101.964 630.853 L 93.083 621.973 L 117.06 597.996 L 120.612 601.549 L 100.188 621.974 L 104.628 626.413 L 109.068 621.974 L 137.928 623.305 L 130.38 627.302 Z " fill="rgb(93,93,93)"/>
+                <line x1="176.113" y1="673.923" x2="168.121" y2="681.915" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(93,93,93)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 168.121 686.354 C 166.895 687.58 164.906 687.58 163.681 686.355 C 162.455 685.129 162.455 683.14 163.681 681.914 C 164.906 680.689 166.895 680.69 168.121 681.915 C 169.346 683.14 169.346 685.129 168.121 686.354 Z " fill="rgb(255,255,0)"/>
+                <rect x="23.989" y="420.337" width="79.107" height="21.346" transform="matrix(0,-1,1,0,-367.467,494.553)" fill="rgb(235,235,235)"/>
+                <path d=" M 52.902 470.551 C 49.09 470.55 45.994 452.824 45.995 430.991 C 45.994 409.158 49.09 391.432 52.901 391.432 C 56.714 391.432 59.808 409.158 59.809 430.991 C 59.809 452.825 56.714 470.55 52.902 470.551 Z " fill="rgb(235,235,235)" vector-effect="non-scaling-stroke" stroke-width="1" stroke="rgb(0,0,0)" stroke-opacity="100" stroke-linejoin="miter" stroke-linecap="square" stroke-miterlimit="3"/>
+                <path d=" M 74.252 470.55 C 70.439 470.55 67.345 452.824 67.344 430.991 C 67.345 409.158 70.439 391.432 74.252 391.432 C 78.063 391.432 81.159 409.158 81.158 430.991 C 81.159 452.824 78.063 470.55 74.252 470.55 Z " fill="rgb(235,235,235)"/>
+                <rect x="60.284" y="463.817" width="3.768" height="4.395" transform="matrix(0.078,-0.997,0.997,0.078,-407.269,491.749)" fill="rgb(93,93,93)"/>
+                <rect x="60.178" y="463.829" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-401.753,542.889)" fill="rgb(93,93,93)"/>
+                <rect x="67.63" y="463.926" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-394.16,550.439)" fill="rgb(93,93,93)"/>
+                <rect x="61.649" y="457.551" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-393.96,537.882)" fill="rgb(93,93,93)"/>
+                <rect x="69.102" y="457.649" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-386.367,545.432)" fill="rgb(93,93,93)"/>
+                <rect x="63.907" y="451.274" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-385.357,533.662)" fill="rgb(93,93,93)"/>
+                <rect x="71.359" y="451.372" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-377.764,541.212)" fill="rgb(93,93,93)"/>
+                <rect x="64.695" y="443.741" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-377.015,526.677)" fill="rgb(93,93,93)"/>
+                <rect x="72.147" y="443.839" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-369.422,534.226)" fill="rgb(93,93,93)"/>
+                <rect x="64.778" y="436.208" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-369.399,518.987)" fill="rgb(93,93,93)"/>
+                <rect x="72.23" y="436.306" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-361.808,526.536)" fill="rgb(93,93,93)"/>
+                <rect x="64.78" y="428.792" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-361.985,511.337)" fill="rgb(93,93,93)"/>
+                <rect x="72.232" y="428.89" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-354.394,518.886)" fill="rgb(93,93,93)"/>
+                <rect x="64.7" y="421.141" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-354.42,503.363)" fill="rgb(93,93,93)"/>
+                <rect x="72.152" y="421.239" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-346.829,510.912)" fill="rgb(93,93,93)"/>
+                <rect x="63.917" y="413.608" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-347.699,494.808)" fill="rgb(93,93,93)"/>
+                <rect x="71.368" y="413.707" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-340.109,502.356)" fill="rgb(93,93,93)"/>
+                <rect x="63.234" y="406.075" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-340.875,486.351)" fill="rgb(93,93,93)"/>
+                <rect x="70.686" y="406.173" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-333.284,493.901)" fill="rgb(93,93,93)"/>
+                <rect x="61.765" y="399.796" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-336.115,478.404)" fill="rgb(93,93,93)"/>
+                <rect x="69.217" y="399.894" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-328.524,485.954)" fill="rgb(93,93,93)"/>
+                <rect x="60.115" y="393.518" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-331.543,470.278)" fill="rgb(93,93,93)"/>
+                <rect x="67.567" y="393.617" width="3.767" height="4.393" transform="matrix(-0.032,-0.999,0.999,-0.032,-323.952,477.827)" fill="rgb(93,93,93)"/>
+                </g>
+                <text x="320" y="150" class="odi_svg_text">Wellcome to Odi</text>
+            </svg>
+    </footer>
+    <script>
+        btn.addEventListener('click', function() {
+            main_menu.classList.toggle('main_menu_open');
+        })
+    </script>
 </body>
 </html>

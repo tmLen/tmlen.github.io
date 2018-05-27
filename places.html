@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ru">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Места.Город Одинцово</title>
+                <link rel="stylesheet" type="text/css" href="style.css">
+                <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+                <script
+                src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+                <script>
+                    $(document).ready(function(){
+                        $(".kings_button").click(function(){
+                        $(".kings_russia").toggleClass("unvisible"); 
+                        $(".ussr").toggleClass("unvisible", false);
+                        $(".prestnt_russia").toggleClass("unvisible", false);
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".ussr_button").click(function(){
+                        $(".ussr").toggleClass("unvisible"); 
+                        $(".kings_russia").toggleClass("unvisible", false);
+                        $(".prestnt_russia").toggleClass("unvisible", false); 
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".present_button").click(function(){
+                        $(".prestnt_russia").toggleClass("unvisible"); 
+                        $(".ussr").toggleClass("unvisible", false);
+                        $(".kings_russia").toggleClass("unvisible", false); 
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".person_01").click(function(){
+                        $(".person_information_01").toggleClass("unvisible"); 
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".person_02").click(function(){
+                        $(".person_information_02").toggleClass("unvisible"); 
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".person_03").click(function(){
+                        $(".person_information_03").toggleClass("unvisible"); 
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".person_04").click(function(){
+                        $(".person_information_04").toggleClass("unvisible"); 
+                        return false;
+                        });
+                    });
+                </script>
+                    
+            </head>
+<body>
+        <header>
+                <div class="nav" id="main_menu">
+                    <div class="menu_button" id="btn"></div>
+                    <ul class="menu_list">
+                        <a href="index.html"><img src="./images/gerb.png" alt="Герб Одинцово" class="menu_gerb"></a>
+                        <a href="./index.html#item_news"><li class="menu_item">Новости города</li></a>
+                        <a href="./index.html#item_history"><li class="menu_item">История города</li></a>
+                        <a href="./index.html#item_places"><li class="menu_item">Интересные места</li></a>
+                        <a href="./index.html#item_people"><li class="menu_item">Известные жители</li></a>
+                        <a href="./galery.html"><li class="menu_item">Галерея</li></a>
+                    </ul>
+                </div>
+        </header>
+        <main>
+            <div class="menu_placeholder"></div>
+            <div class="place_box">
+                <h2>Баранка</h2>
+                <div class="place_map">
+                        <iframe class="place_map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A6abffa1f8cb3e86b4592f7f6932f9da9b835ee232b1634631671b9655746be28&amp;source=constructor"  frameborder="0"></iframe>                
+                </div>
+                <div class="place_text">
+                    <p>Центральный пруд около городского дома офицеров (ГДО) с островом посередние в народе называется Баранка.</p> 
+                    <p> На острове стоят скульптуры оленей. Олень - герб города одинцово.</p>
+                    <p> По праздникам с этого острова запускают фейерверк.</p>
+                </div>
+            </div>
+            <div class="place_box">
+                    <h2>Растопырка</h2>
+                    <div class="place_map">
+                        <iframe class="place_map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A230e55279ac4abf7d940eb9f25a16209c19345d1ecbca5cdb0c4006100542d5e&amp;source=constructor"  frameborder="0"></iframe> 
+                    </div>
+                    <div class="place_text">
+                        <p>Растопырка - магазин в самом центре города. Находится между двумя домами и образует с ними букву "V"</p>
+                        <p>В народе название почти забытое, помнят только настоящие старожилы</p>
+                    </div>
+                </div>
+                <div class="place_box">
+                        <h2>Лазутинка</h2>
+                        <div class="place_map">
+                            <iframe class="place_map" src="https://yandex.ru/map-widget/v1/?um=constructor%3Ac73988005d2ec0740470cf35bcb3d9f46371b1da18a3821da70b89da920f2298&amp;source=constructor" frameborder="0"></iframe>                       
+                        </div>
+                        <div class="place_text">
+                            <p>В лесу около Одинцово построили хорошую лыжероллерную трассу</p>
+                            <p>В народе она называется Лазутинкой в честь олимпийской чемпионки Ларисы Лазутиной, которая живет и работает в Одинцово</p>
+                            <p>Любимое место спортсменов и отдыхающих города</p>
+                        </div>
+                    </div>
+                    <div class="place_box">
+                            <h2>Второй завод</h2>
+                            <div class="place_map">
+                                    <iframe class="place_map" src="https://yandex.ru/map-widget/v1/?um=constructor%3A676b5caa12c9a54aadac272148571060da7e8965af7f47c1c9c12c69c61ea74e&amp;source=constructor" frameborder="0"></iframe>
+                            </div>
+                            <div class="place_text">
+                                <p>Железная дорога делит одинцово на две части - Большую землю и Второй завод</p>
+                                <p>Второй завод внезапно назван в честь кирпичного завода, который располагался там в советское время</p>
+                                <p>Раньше это место было опасно посещать всем жителям большой земли, но теперь границы стираются, появился новый автомобильный мост, который связал их и прогуляться по второму заводу теперь не опаснее чем по ГДО</p>
+                            </div>
+                    </div>
+        </main>
+        <footer>
+                <p class="author">Разработчик: Евгений Степанов</p>
+                <script>
+                        btn.addEventListener('click', function() {
+                            main_menu.classList.toggle('main_menu_open');
+                        })
+                    </script>
+        </footer>
+</body>
+</html>

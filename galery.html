@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ru">
+        <head>
+                <meta charset="UTF-8">
+                <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                <meta http-equiv="X-UA-Compatible" content="ie=edge">
+                <title>Галерея.Город Одинцово</title>
+                <link rel="stylesheet" type="text/css" href="style.css">
+                <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon">
+                <script
+                src="https://code.jquery.com/jquery-3.3.1.min.js"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                crossorigin="anonymous"></script>
+                <script>
+                    $(document).ready(function(){
+                        $(".kings_button").click(function(){
+                        $(".kings_russia").toggleClass("unvisible"); 
+                        $(".ussr").toggleClass("unvisible", false);
+                        $(".prestnt_russia").toggleClass("unvisible", false);
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".ussr_button").click(function(){
+                        $(".ussr").toggleClass("unvisible"); 
+                        $(".kings_russia").toggleClass("unvisible", false);
+                        $(".prestnt_russia").toggleClass("unvisible", false); 
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".present_button").click(function(){
+                        $(".prestnt_russia").toggleClass("unvisible"); 
+                        $(".ussr").toggleClass("unvisible", false);
+                        $(".kings_russia").toggleClass("unvisible", false); 
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".person_01").click(function(){
+                        $(".person_information_01").toggleClass("unvisible"); 
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".person_02").click(function(){
+                        $(".person_information_02").toggleClass("unvisible"); 
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".person_03").click(function(){
+                        $(".person_information_03").toggleClass("unvisible"); 
+                        return false;
+                        });
+                    });
+                </script>
+                <script>
+                    $(document).ready(function(){
+                        $(".person_04").click(function(){
+                        $(".person_information_04").toggleClass("unvisible"); 
+                        return false;
+                        });
+                    });
+                </script>
+                    
+            </head>
+<body>
+        <header>
+                <div class="nav" id="main_menu">
+                    <div class="menu_button" id="btn"></div>
+                    <ul class="menu_list">
+                        <a href="index.html"><img src="./images/gerb.png" alt="Герб Одинцово" class="menu_gerb"></a>
+                        <a href="./index.html#item_news"><li class="menu_item">Новости города</li></a>
+                        <a href="./index.html#item_history"><li class="menu_item">История города</li></a>
+                        <a href="./index.html#item_places"><li class="menu_item">Интересные места</li></a>
+                        <a href="./index.html#item_people"><li class="menu_item">Известные жители</li></a>
+                        <a href="./galery.html"><li class="menu_item">Галерея</li></a>
+                    </ul>
+                </div>
+        </header>
+        <main>
+            <div class="img_galery">
+                <h2>Одинцово в фотографиях</h2>
+                <input type="checkbox" id="img01">
+                <label for="img01" class="img_item img_item01"><img class="mini_img" src="./images/g001-min.jpg" alt=""></label>
+                <input type="checkbox" id="img02">
+                <label for="img02" class="img_item img_item02"><img class="mini_img" src="./images/g002-min.jpg" alt=""></label>
+                <input type="checkbox" id="img03">
+                <label for="img03" class="img_item img_item03"><img class="mini_img" src="./images/g003-min.jpg" alt=""></label>
+                <input type="checkbox" id="img04">
+                <label for="img04" class="img_item img_item04"><img class="mini_img" src="./images/g004-min.jpg" alt=""></label>
+                <input type="checkbox" id="img05">
+                <label for="img05" class="img_item img_item05"><img class="mini_img" src="./images/g005-min.jpg" alt=""></label>
+                <input type="checkbox" id="img06">
+                <label for="img06" class="img_item img_item06"><img class="mini_img" src="./images/g006-min.jpg" alt=""></label>
+                <input type="checkbox" id="img07">
+                <label for="img07" class="img_item img_item07"><img class="mini_img" src="./images/g007-min.jpg" alt=""></label>
+                <input type="checkbox" id="img08">
+                <label for="img08" class="img_item img_item08"><img class="mini_img" src="./images/g008-min.jpg" alt=""></label>
+                <input type="checkbox" id="img09">
+                <label for="img09" class="img_item img_item09"><img class="mini_img" src="./images/g009-min.jpg" alt=""></label>
+                <input type="checkbox" id="img10">
+                <label for="img10" class="img_item img_item10"><img class="mini_img" src="./images/g010.png" alt=""></label>
+                <input type="checkbox" id="img11">
+                <label for="img11" class="img_item img_item11"><img class="mini_img" src="./images/g011.png" alt=""></label>
+                <input type="checkbox" id="img12">
+                <label for="img12" class="img_item img_item12"><img class="mini_img" src="./images/g012-min.jpg" alt=""></label>
+            </div>
+        </main>
+        <footer>
+                <p class="author">Разработчик: Евгений Степанов</p>
+                <script>
+                        btn.addEventListener('click', function() {
+                            main_menu.classList.toggle('main_menu_open');
+                        })
+                    </script>
+        </footer>
+</body>
+</html>
